@@ -1,0 +1,30 @@
+body{
+  text-align:center;
+  background-color:darkgrey;
+  width:100%;
+}
+
+div.partyBox{
+  padding: 5px;
+  margin: 5px;
+  width:45% !important;
+  border: 2px solid white;
+  overflow-x:scroll;
+}
+
+td{
+  padding-left:10px;
+}
+
+div.partyIn{
+  float:left;
+  background-color:orange;
+}
+
+div.partyOut{
+  float:right;
+  background-color:lightgreen;
+}
+h2.date-heading{
+  clear: both;
+}

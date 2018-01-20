@@ -25,11 +25,11 @@
   function prettyRes(res){
     var str = `<h3 class="txt-h3">${res.name}</h3>`
     str += "<table>"
-    str += `<tr><td># People</td> <td>${res.num_nights}</td></tr>`
+    str += `<tr><td># People</td> <td>${res.numPeople}</td></tr>`
     str += `<tr><td>Yurt</td> <td>${res.yurt}</td></tr>`
     str += `<tr><td>Phone</td> <td>${res.phone}</td></tr>`
     str += `<tr><td>Email</td> <td>${res.email}</td></tr>`
-    str += `<tr><td>Nights (${res.num_nights})</td><td>${res.nights.join("<br>")}</td></tr>`
+    str += `<tr><td>Nights (${res.numNights})</td><td>${res.nights.join("<br>")}</td></tr>`
     str += "</table>"
     return str;
   }

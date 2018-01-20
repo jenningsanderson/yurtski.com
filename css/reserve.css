@@ -1,6 +1,7 @@
 body{
   text-align:center;
   background-color:darkgrey;
+  width:100%;
 }
 .group {
     position: absolute;
@@ -20,5 +21,5 @@ body{
 
 section.limiter{
   background-color:white;
-  width:300px;
+  min-width:350px;
 }

@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.12.2/d3.min.js"></script>
+
   <link rel="stylesheet" href="css/reserve.css">
 
 </head>
@@ -57,109 +59,104 @@
 
   <script type="text/javascript">
 
-    var trips = [
-    {
-      'tripID': 'alp-1',
-      'nights': ["2018-12-12","2018-12-13","2018-12-14","2018-12-15","2018-12-16","2018-12-17","2018-12-18"]
-    },
-    {
-      'tripID' : 'alp-2',
-      'nights' : ["2018-12-23"]
-    },
-    // {
-    //   'tripID' : 'brad-newYears',
-    //   'nights' : ["2018-12-30","2018-12-31","2019-01-01"]
-    // }
-    ]
+    d3.json("http://localhost:8080/reservations.json",function(err, trips){
+      if(err) throw err
 
-    var daysIn = []
-    var daysOut = []
-    var daysBooked = []
-    var singleNights = []
+      console.log(trips)
 
-    trips.forEach(function(trip){
-      // console.log(trip.nights)
-      // var dIn = flatpickr.parseDate(trip.nights[0], "Y-m-d")
-      daysIn.push( trip.nights[0] )
+      var daysIn = []
+      var daysOut = []
+      var daysBooked = []
+      var singleNights = []
 
-      var lastNight = flatpickr.parseDate(trip.nights[trip.nights.length-1],"Y-m-d")
-      var dOut = new Date(lastNight);
-      dOut.setDate(lastNight.getDate()+1)
+      trips.forEach(function(trip){
+        // console.log(trip.nights)
+        // var dIn = flatpickr.parseDate(trip.nights[0], "Y-m-d")
+        daysIn.push( trip.nights[0] )
 
-      daysOut.push( flatpickr.formatDate(dOut, "Y-m-d") )
+        var lastNight = flatpickr.parseDate(trip.nights[trip.nights.length-1],"Y-m-d")
+        var dOut = new Date(lastNight);
+        dOut.setDate(lastNight.getDate()+1)
 
-      if (trip.nights.length>1){
-        for(var i=1; i<trip.nights.length; i++){
-          daysBooked.push(trip.nights[i])
+        daysOut.push( flatpickr.formatDate(dOut, "Y-m-d") )
+
+        if (trip.nights.length>1){
+          for(var i=1; i<trip.nights.length; i++){
+            daysBooked.push(trip.nights[i])
+          }
+        }else{
+          singleNights.push([trip.nights[0],flatpickr.formatDate(dOut,"Y-m-d")])
         }
-      }else{
-        singleNights.push([trip.nights[0],flatpickr.formatDate(dOut,"Y-m-d")])
+      })
+
+      console.log("daysIn: " + daysIn)
+      console.log("daysOut: " + daysOut)
+
+      function warn(string){
+        var w = document.getElementById('warning')
+        w.innerHTML = string
+        w.style.display='block'
       }
 
-    })
+      function hideWarning(){
+        document.getElementById('warning').style.display='none';
+      }
 
-    console.log("daysIn: " + daysIn)
-    console.log("daysOut: " + daysOut)
-
-    function warn(string){
-      var w = document.getElementById('warning')
-      w.innerHTML = string
-      w.style.display='block'
-    }
-
-    function hideWarning(){
-      document.getElementById('warning').style.display='none';
-    }
-
-    var calendar = flatpickr("#datePicker", {
-      minDate: "2018-12-01",
-      maxDate: "2019-03-31",
-      mode: "range",
-      inline: true,
-      disable: daysBooked,
-      onDayCreate: function(dObj, dStr, fp, dayElem){
-        if (daysIn.indexOf(flatpickr.formatDate(dayElem.dateObj,"Y-m-d")) > -1){
-          dayElem.innerHTML += "<span class='group'></span>";
-        }
-        if (daysOut.indexOf(flatpickr.formatDate(dayElem.dateObj,"Y-m-d")) > -1){
-          dayElem.innerHTML += "<span class='group out'></span>";
-        }
-      },
-      onValueUpdate: function(selectedDates, dateStr, instance){
-        var warning = document.getElementById('warning')
-        console.log("dates: " + selectedDates)
-        if (selectedDates.length > 1){
-          if (selectedDates[0].getDate()===selectedDates[1].getDate()){
-            console.warn("Error: Same Date")
-            warn("Please start your trip on the day you would like to go into the yurt and end your trip on the day you plan to checkout.")
-            calendar.clear();
-            return;
+      var calendar = flatpickr("#datePicker", {
+        minDate: "2018-12-01",
+        maxDate: "2019-03-31",
+        mode: "range",
+        inline: true,
+        disable: daysBooked,
+        onDayCreate: function(dObj, dStr, fp, dayElem){
+          if (daysIn.indexOf(flatpickr.formatDate(dayElem.dateObj,"Y-m-d")) > -1){
+            dayElem.innerHTML += "<span class='group'></span>";
           }
+          if (daysOut.indexOf(flatpickr.formatDate(dayElem.dateObj,"Y-m-d")) > -1){
+            dayElem.innerHTML += "<span class='group out'></span>";
+          }
+        },
+        onValueUpdate: function(selectedDates, dateStr, instance){
+          var warning = document.getElementById('warning')
+          console.log("dates: " + selectedDates)
+          if (selectedDates.length > 1){
+            if (selectedDates[0].getDate()===selectedDates[1].getDate()){
+              console.warn("Error: Same Date")
+              warn("Please start your trip on the day you would like to go into the yurt and end your trip on the day you plan to checkout.")
+              calendar.clear();
+              return;
+            }
 
-          //Scenario for one night trips?
-          if(singleNights.length){
-            //If there are single night trips, we just need to confirm that we're not over-stepping them
-            for(var i in singleNights){
-              var nightIn = flatpickr.parseDate(singleNights[i][0], "Y-m-d")
-              var nightOut = flatpickr.parseDate(singleNights[i][1], "Y-m-d")
-              if ((selectedDates[0] <= nightIn) && (selectedDates[1] >= nightOut)){
-                calendar.clear()
-                warn("Your trip cannot overlap another trip")
-                return;
+            //Scenario for one night trips?
+            if(singleNights.length){
+              //If there are single night trips, we just need to confirm that we're not over-stepping them
+              for(var i in singleNights){
+                var nightIn = flatpickr.parseDate(singleNights[i][0], "Y-m-d")
+                var nightOut = flatpickr.parseDate(singleNights[i][1], "Y-m-d")
+                if ((selectedDates[0] <= nightIn) && (selectedDates[1] >= nightOut)){
+                  calendar.clear()
+                  warn("Your trip cannot overlap another trip")
+                  return;
+                }
               }
             }
+
+            //Otherwise, we have a successful trip
+            hideWarning();
+            document.getElementById('newTrip').innerHTML = "Going into Yurt on <strong>" +
+             flatpickr.formatDate(selectedDates[0],"D, M j") + "</strong> and checking out by 11:00am on <strong>" +
+              flatpickr.formatDate(selectedDates[1],"D, M j") + "</strong>"
+
           }
 
-          //Otherwise, we have a successful trip
-          hideWarning();
-          document.getElementById('newTrip').innerHTML = "Going into Yurt on <strong>" +
-           flatpickr.formatDate(selectedDates[0],"D, M j") + "</strong> and checking out by 11:00am on <strong>" +
-            flatpickr.formatDate(selectedDates[1],"D, M j") + "</strong>"
-
         }
+      });
+    })
 
-      }
-    });
+
+
+
+
 
     document.getElementById('peopleSelector').addEventListener('change',function(e){
       console.log("People Changed: " + e.target.value)

@@ -12,7 +12,11 @@ body{
     left: calc(50% - 8px);
     content: " ";
     display: block;
-    background: black;
+    background: orange;
+}
+
+span.no-gh{
+  color:blue;
 }
 
 .group.out {
@@ -20,7 +24,18 @@ body{
   left: calc(50%);
 }
 
+span.legend{
+  position:inherit;
+}
+
 section.limiter{
   background-color:white;
   min-width:350px;
+}
+
+table#legend{
+  margin-left:10px;
+}
+table#legend td{
+  padding-left:5px;
 }

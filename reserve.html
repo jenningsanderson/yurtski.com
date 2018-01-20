@@ -35,23 +35,30 @@
     <h3 class="txt-h3">When?</h3>
     <div id="datePicker"></div>
 
+    <table id="legend">
+      <tr><td><span class="group out legend"></span> </td><td class="txt-s">Trip coming out (great day to start your own trip)</td></tr>
+      <tr><td><span class="group legend"></span> </td><td class="txt-s">Trip going in (good day to leave the yurt)</td></tr>
+      <tr><td><span class="no-gh">#</span> </td><td class="txt-s">Gear haul not available this day</td></tr>
+    </table>
+
     <p id="newTrip"></p>
 
     <p class="border border--orange" style="display:none;" id="warning"></p>
 
-    <h3 class="txt-h3">Gear Haul?</h3>
-    <p>Have us deliver your equipment to the yurts via snowmobile for $65 / person. </p>
+    <div id="gearHaul">
+      <h3 class="txt-h3">Gear Haul?</h3>
+      <p>We can deliver your equipment to the yurts via snowmobile for $65 / person. </p>
 
-    <p>We will meet you at the trailhead at 9am on the day your group goes in and then at the Yurts by 10am on the day you plan to leave.</p>
-    </p>
-
-    <label class='checkbox-container'>
-        <input type='checkbox' />
-        <div class='checkbox mr6'>
-          <svg class='icon'><use xlink:href='#icon-check' /></svg>
-        </div>
-        <p>Yes, we'd like to include a Gear Haul for <span class="txt-bold" id="count"> 2 </span> people.</p>
-      </label>
+      <div id="gearHaulCheckBox">
+       <label class='checkbox-container'>
+          <input type='checkbox' />
+          <div class='checkbox mr6'>
+            <svg class='icon'><use xlink:href='#icon-check' /></svg>
+          </div>
+          <p>Yes, we'd like to include a Gear Haul for <span class="txt-bold" id="count"> 2 </span> people.</p>
+        </label>
+      </div>
+    </div>
 
     <option>
 
@@ -59,10 +66,16 @@
 
   <script type="text/javascript">
 
-    d3.json("https://montana-backcountry-yurts.appspot.com/reservations.json",function(err, trips){
+    d3.json("https://montana-backcountry-yurts.appspot.com/calendar.json",function(err, trips){
+    // d3.json("http://localhost:8080/calendar.json",function(err, calendar){
       if(err) throw err
+      var trips = calendar.trips
+      var ghUnavailable = calendar.noGearHaul.map(function(d){
+        return flatpickr.formatDate(
+          flatpickr.parseDate(d,"M j, Y"),"Y-m-d")
+        });
 
-      console.log(trips)
+      // console.log(ghUnavailable)
 
       var daysIn = []
       var daysOut = []
@@ -100,6 +113,7 @@
 
       function hideWarning(){
         document.getElementById('warning').style.display='none';
+        document.getElementById('gearHaul').style.display='block';
       }
 
       var calendar = flatpickr("#datePicker", {
@@ -115,6 +129,10 @@
           if (daysOut.indexOf(flatpickr.formatDate(dayElem.dateObj,"Y-m-d")) > -1){
             dayElem.innerHTML += "<span class='group out'></span>";
           }
+          if (ghUnavailable.indexOf(flatpickr.formatDate(dayElem.dateObj,"Y-m-d")) > -1){
+            dayElem.classList += " no-gh"
+          }
+
         },
         onValueUpdate: function(selectedDates, dateStr, instance){
           var warning = document.getElementById('warning')
@@ -143,19 +161,24 @@
 
             //Otherwise, we have a successful trip
             hideWarning();
+            document.getElementById('gearHaul').classList = "";
+            document.getElementById('gearHaulCheckBox').style.display = 'block';
             document.getElementById('newTrip').innerHTML = "Going into Yurt on <strong>" +
              flatpickr.formatDate(selectedDates[0],"D, M j") + "</strong> and checking out by 11:00am on <strong>" +
               flatpickr.formatDate(selectedDates[1],"D, M j") + "</strong>"
+
+            //check for gear haul
+            if ( (ghUnavailable.indexOf(flatpickr.formatDate(selectedDates[0],"Y-m-d")) > -1) ||
+                 (ghUnavailable.indexOf(flatpickr.formatDate(selectedDates[1],"Y-m-d")) > -1) ){
+                   warn('Note: Gear haul is not available on your selected days in and out, please prepare your own gear transportation')
+                   document.getElementById('gearHaul').classList += 'disabled opacity25'
+                   document.getElementById('gearHaulCheckBox').style.display = 'none';
+                 }
 
           }
         }
       });
     })
-
-
-
-
-
 
     document.getElementById('peopleSelector').addEventListener('change',function(e){
       console.log("People Changed: " + e.target.value)

@@ -42,22 +42,67 @@
     <p>I have and know how to use all essential avalanche equipment including but not limited to transceiver, probe and shovel.</p>
   </section>
 
-  <section class="sign mt12">
+  <section id="signbox" class="sign mt12">
     <p class="txt-s">I HAVE CAREFULLY READ, CLEARLY UNDERSTAND, AND VOLUNTARILY SIGN THIS WAIVER AND RELEASE AGREEMENT</p>
 
     <div class="signbox mt12 align-center">
 
-      <input name="name" class='input input--border-green w300' placeholder='Name' />
+      <form action="javascript:completeWaiver();">
 
-      <input name="email" class='mt6 input input--border-green w300' placeholder='Email' />
+        <input id="name" name="name" class='input input--border-green w300' placeholder='Full Name' />
 
-      <button class="btn btn--green mt6 w300 align-center" id="agree">I agree</button>
+        <input id="email" name="email" class='mt6 input input--border-green w300' placeholder='Email' />
+
+        <button class="btn btn--green mt6 w300 align-center" type="submit" id="agree">I Agree</button>
+
+      </form>
+
+    </div>
+  </section>
+
+  <section id="signed" class="mt12 border border--green py6 px6" style="display:none;">
+    <p class="txt-s">I HAVE CAREFULLY READ, CLEARLY UNDERSTAND, AND VOLUNTARILY SIGN THIS WAIVER AND RELEASE AGREEMENT</p>
+
+    <div class="signed mt12 align-center">
+
+      <p>Signed By<br>
+        <p style="font-family:cursive;font-size:16px;" id='clientName'></p>
+        <p style="font-family:sans-serif;font-size:16px;" id='clientEmail'></p>
+        <p>On <em><span id="date" class="color-red"></span></em></p>
+
     </div>
   </section>
 
   <footer class="mt36 align-center">
     <p>&copy; Montana Backcountry Yurts, LLC dba YurtSki 2018 </p>
   </footer>
+
+  <script type="text/javascript">
+    function completeWaiver(){
+      console.log('submitting')
+
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+
+      console.log(name, email)
+
+      document.getElementById('clientName').innerHTML = name;
+      document.getElementById('clientEmail').innerHTML = email;
+
+      var date = new Date()
+
+      document.getElementById('date').innerHTML = date;
+
+
+      //Change sign box to signed
+      document.getElementById('signbox').style.display = 'none';
+      document.getElementById('signed').style.display = 'block';
+
+
+    }
+
+
+  </script>
 
 </body>
 </html>

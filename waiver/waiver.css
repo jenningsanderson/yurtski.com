@@ -5,11 +5,11 @@ body{
   margin: 0 auto;
 }
 
-section.waiver-section{
+div.waiver-div{
   margin-bottom:20px;
   font-family:monospace;
 }
 
-section.waiver-section ul{
-  list-style-type: none;
+input.initials{
+  font-family:cursive;
 }

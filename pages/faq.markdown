@@ -59,11 +59,11 @@ We utilize a mountain spring for drinking water. Drinking water can be retrieved
 The yurts are heated by wood burning stoves and all firewood is provided. Inside the yurts there are wood bunks full of dry, split wood. Outside the yurts there are woodpiles where rounds can be found for splitting.
 
 ### What do I need to bring?
-[Click Here for our suggested packing list](/packing-list.html)
+<a class="link" href="/packing-list/">Click here to see our suggested packing list.</a>
 
 What is supplied at the yurts?
 Yurtski provides a wood burning stove, firewood, ax, maul ax/splitting tool, cook stove, propane, lantern, white gas, pots, pans, plates, bowls, cups, cooking and eating utensils, kettle, snow melt pots, at least 5 gallons spring H20 for drinking (only if a gear haul is elected), sleeping mattresses/pads/cot/futon, Life flight extraction kit (helicopter specific backboard, splints, neck braces, emergency blanket, six man carry, basic first aid), super terrain
 
-Is there an outhouse?
+### Is there an outhouse?
 There is a three sided outhouse located directly behind each yurt in order to answer nature’s call in relative comfort.
 

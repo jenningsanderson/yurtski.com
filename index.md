@@ -16,8 +16,6 @@ So get a group together and come on up to Yurtski for an experience that will la
 
 YurtSki is permitted by the Lolo National Forest, Seeley Ranger Station
 
-## Check out a day in the life at YURTSKI
-
 <div class="align-center">
 <iframe class="embedded-video" src="https://www.youtube.com/embed/cQxT1Rym_48" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div>

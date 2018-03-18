@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+
+	<body>
+
+		<div class="page-header animation-fade-in animation--speed-1 align-center" style='background:url({{page.header}});background-size:cover;'>
+			
+			<img class="animation-fade-in animation--speed-1 pagelogo" src="/img/yurtski-med.png" />
+
+		</div>
+		
+		{% include navigation.html %}
+
+	    <section class="wrapper">
+
+	    	<div class="flex-parent">
+				<div class="flex-child flex-child--grow">
+					{{ content }}
+				</div>
+
+				<aside class='flex-child flex-child--no-shrink w180 right-sidebar'>
+					{% include sidebar-right.html %}
+				</aside>
+	    	</div>
+
+	    </section>
+
+		{% include footer.html %}
+	</body>
+</html>

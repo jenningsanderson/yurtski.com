@@ -1,0 +1,32 @@
+<nav id='main' class="topnav" role="navigation">
+
+    <a class="logo" href="/">YurtSki</a>
+    
+    <a href="javascript:void(0);" class="icon" onclick="navToggle()">&#9776;</a>
+
+    {% assign pages = site.pages | sort: 'order' %}
+    {% for node in pages %}
+    {% if node.navigation_title %}
+        {% if page.url == node.url %}
+            <a href="{{node.url}}" class="active">{{node.navigation_title}}</a>
+        {% else %}
+            <a class="" href="{{node.url}}">{{node.navigation_title}}</a>
+        {% endif %}
+    {% endif %}
+    {% endfor %}
+
+    <a href="/">Book Now</a>
+
+    
+
+    <script type="text/javascript">
+        function navToggle() {
+            var x = document.getElementById("main");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</nav>

@@ -1,0 +1,135 @@
+/*
+	YurtSki Main Stylesheet
+*/
+
+#splash-header {
+    padding-top: 25px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/bowl-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+#splashlogo{
+	width:60%;
+}
+
+img.pagelogo{
+	margin-top:25px;
+	width:25%;
+	margin-bottom:10px;
+}
+
+h1{
+
+}
+
+h2{
+	font-size:1.5em;
+}
+
+h3{
+	padding-top:10px;
+	padding-bottom:5px;
+	font-size:1.2em;
+	font-weight:600;
+}
+
+span.bio-em{
+	font-weight:200;
+	font-style:italic;
+}
+
+img.bio{
+	width:400px;
+}
+
+img.social{
+	filter: grayscale(100%);
+}
+
+@keyframes resaturate {
+    0%   {filter:grayscale(100%);}
+    10%  {filter:grayscale(90%);}
+    20%  {filter:grayscale(80%);}
+    30%  {filter:grayscale(70%);}
+    40%  {filter:grayscale(60%);}
+    50%  {filter:grayscale(50%);}
+    60%  {filter:grayscale(40%);}
+    70%  {filter:grayscale(30%);}
+    80%  {filter:grayscale(20%);}
+    90%  {filter:grayscale(10%);}
+    100% {filter:grayscale(0%);}
+}
+
+img.social:hover{
+	filter: grayscale(0%);
+	cursor:pointer;
+	animation-name: resaturate;
+    animation-duration: 0.5s;
+}
+
+p{
+	margin-bottom:10px;
+}
+
+div.page-header{
+	background-size: cover;
+}
+
+section.wrapper{
+	padding-top:75px;
+	padding-left:5px;
+	padding-right:10px;
+	max-width:950px;
+	margin:0 auto;
+}
+
+aside.right-sidebar{
+	padding-left:5px;
+}
+
+img.bio{
+	padding:5px;
+}
+
+/* Navigation (On Computer)*/
+nav#main{
+	background-color:#222;
+	text-align:center;
+	display:block;
+}
+
+nav#main a{
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	display:inline-block;
+	color:white;
+	padding: 15px 10px 15px 10px;
+	margin:0 2%;
+	font-size:24px;
+	text-shadow:2px 2px 4px #000;
+}
+
+nav#main a:hover:not(.icon){
+	background-color:#01AEF3;
+	text-shadow:2px 2px 4px #555;
+	animation-name: resaturate;
+    animation-duration: 0.5s;
+}
+
+
+nav#main a.active{
+	color:#FCF900;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+nav#main .icon {
+    display: none;
+}
+
+iframe.embedded-video{
+	width:560px; 
+	height:315px;
+}

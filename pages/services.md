@@ -4,7 +4,7 @@ title: What We Offer
 navigation_title: Services
 permalink: /services
 order: 2
-header: '/img/yurts-night-bg.jpg'
+header: '/img/skinning.jpg'
 ---
 
 <p></p>
@@ -35,7 +35,7 @@ header: '/img/yurts-night-bg.jpg'
 	<div class='flex-child flex-child--no-shrink w360 pt24 px12'>
 		<h2 class="py6 align-center">Classes &amp; Clinics</h2>
 		<img src='/img/classes.jpg'>
-		<p>Attend a backcountry skiing clinic or an avalanche safety course at the yurts! For the most up-to-date information, see our <a class="link" href="//facebook.com/yurtski/">Facebook Page</a>.</p> If you'd like to run a course or clinic, please <a class="link" href="/contact/"> contact us</a>, we'd love to work with you!
+		<p>Attend a backcountry skiing clinic or an avalanche safety course at the yurts! For the most up-to-date information, see our <a class="link" href="//facebook.com/yurtski/">Facebook Page</a>.</p> If you'd like to run a course or clinic, please <a class="link" href="mailto:info@yurtski.com">contact us</a>, we'd love to work with you!
 	</div>
 
 </div>

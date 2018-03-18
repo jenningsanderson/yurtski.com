@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Packing List 
-tagline: Be sure to bring these items to the yurt for a great time!
 permalink: /packing-list
 ---
 

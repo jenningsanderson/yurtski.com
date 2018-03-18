@@ -1,9 +1,8 @@
 <div id='right-hand-sidebar'>
-	<p class="pl12 txt-em txt-l">Follow us on Facebook and Instagram for updates</p>
-
-	<br>
 
 	<div class="align-center">
+
+		<p class="pl12 txt-em txt-l">Follow us on Facebook and Instagram for updates</p>
 
 		<a target="_blank" class="mr12" href="//facebook.com/yurtski">
 			<img class="social" src="/img/icon/facebook.png">
@@ -12,11 +11,22 @@
 		<a target="_blank" href="//instagram.com/yurtskimt">
 			<img class="social mt3" src="/img/icon/instagram.png">
 		</a>
+
 	</div>
 
-	<p class="pl12 mt12 txt-em txt-l">Click below to lookup availability and reserve a yurt online!</p>
-	<div class="align-center">
-		<a href="#" class='mt24 btn btn--gray cursor--pointer'>Book Now!</a>
+	<p class="pl12 mt12 txt-em txt-l align-center">Lookup availability and reserve a yurt online!</p>
+
+	{% include booknow.html %}
+
+	<div class="mt24 border-t">
+		<h4 class="py12 txt-em txt-l align-center">Contact Us</h4>
+		
+		<a class="link" href="mailto:info@yurtski.com">
+		<svg class='inline icon'><use xlink:href='#icon-mail'/></svg> info@yurtski.com</a>
+		
+		<br>
+		
+		<a class="link" href="tel:+14068484824"><svg class='inline icon'><use xlink:href='#icon-user'/></svg> (406) 848-4824</a>
 	</div>
 
 </div>

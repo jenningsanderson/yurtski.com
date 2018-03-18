@@ -46,6 +46,11 @@ h4{
 	font-weight:500;
 }
 
+p{
+	color: #444;
+	margin-bottom:10px;
+}
+
 span.bio-em{
 	font-weight:200;
 	font-style:italic;
@@ -78,10 +83,6 @@ img.social:hover{
 	cursor:pointer;
 	animation-name: resaturate;
     animation-duration: 0.5s;
-}
-
-p{
-	margin-bottom:10px;
 }
 
 div.page-header{

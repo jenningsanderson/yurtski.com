@@ -1,13 +1,24 @@
 <!-- Footer -->
 <footer>
     <section class="wrapper border-t mt24 pt12 border--gray-light">
-        <div class="align-center">
-            
-            <a target="_blank" class="mr24" href="//facebook.com/yurtski"><img class="social" src="/img/icon/facebook.png"></a>
-            
-            <a target="_blank" href="//instagram.com/yurtskimt"><img class="social mr24 mt3" src="/img/icon/instagram.png"></a>
-            
-            <p class="inline pl12 txt-l"><a href="#" class='mt6 btn btn--gray cursor--pointer'>Book Now</a></p>
+        <div class="flex-parent flex-parent--center-main flex-parent--wrap">
+        
+	        <div class="flex-child"
+	            <a target="_blank" href="//facebook.com/yurtski"><img class="social" src="/img/icon/facebook.png"></a>
+	        </div>
+	        <div class="flex-child ml24">
+	            <a target="_blank" href="//instagram.com/yurtskimt"><img class="social mt3" src="/img/icon/instagram.png"></a>
+	        </div>
+	        <div class="flex-child ml24"> 
+	            {% include booknow.html %}
+	        </div>
+
+	        <div class="flex-child ml24">
+				<a class="link" href="mailto:info@yurtski.com">
+					<svg class='inline icon'><use xlink:href='#icon-mail'/></svg> info@yurtski.com</a>
+				<br>
+				<a class="link" href="tel:+14068484824"><svg class='inline icon'><use xlink:href='#icon-user'/></svg> (406) 848-4824</a>
+	        </div>
         </div>
         <p class="align-center">&copy; 2018 Montana Backcountry Yurts, LLC dba. YurtSki All Rights Reserved.</p>
     </section>

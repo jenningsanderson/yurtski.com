@@ -55,7 +55,7 @@ header: /img/ridge-bg.jpg
 
 <div class="py24 flex-parent flex-parent--wrap border-b border--gray-light">
 	<div class="flex-child flex-child--no-shrink">
-		<img class="bio" src="/img/Bob.jpg">
+		<img class="bio" src="/img/Bob-skiing.jpg">
 	</div>
 
 	<div class="px12 flex-child flex-child--grow w240">

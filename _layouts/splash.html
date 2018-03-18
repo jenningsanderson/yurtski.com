@@ -5,12 +5,13 @@
 
 	<body>
 
-		<div id="splash-header" class=' header-img flex-parent flex-parent--center-main viewport-twothird'>
+		<div id="splash-header" class=' header-img splash-header viewport-half'>
 
-			<div class="flex-child">
+			<canvas id='snow-canvas'>
+			</canvas>
 			
-				<img class="animation-fade-in animation--speed-1" id="splashlogo" src="/img/logo-large.png" />
-			</div>
+			<img class="animation-fade-in animation--speed-1" id="splashlogo" src="/img/yurtski-med.png" />
+
 
 		</div>
 
@@ -31,5 +32,6 @@
 	    </section>
 		
 		{% include footer.html %}
+		<script src="/js/snow.js"></script>
 	</body>
 </html>

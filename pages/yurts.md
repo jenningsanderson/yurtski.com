@@ -4,7 +4,7 @@ title: The Yurts
 navigation_title: The Yurts
 permalink: /yurts
 order: 1
-header: '/img/bowl-bg.jpg'
+header: '/img/yurts-night-bg.jpg'
 ---
 
 The yurts sit nestled high in the Southern Swan Mountains of Montana, in between the Mission Mountains and the Bob Marshall Wilderness with a trailhead about an hour away from Missoula.

@@ -28,7 +28,7 @@ header: '/img/skinning.jpg'
 	<div class='flex-child flex-child--no-shrink w360 pt24 px12'>
 		<h2 class="py6 align-center">Gear Haul</h2>
 		<img src='/img/gearhaul.jpg'>
-		<p>Take the weight off your back and let us haul in your food, drink and equipment. $45 per person. Click <em>Book Now</em> below to see the gear haul availability schedule.</p>
+		<p>Take the weight off your back and let us haul in your food, drink and equipment. $65 per person. Click <em>Book Now</em> below to see the gear haul availability schedule.</p>
 		{% include booknow.html %}
 	</div>
 

@@ -1,7 +1,7 @@
 <nav id='main' class="topnav" role="navigation">
 
     <a class="logo" href="/">YurtSki</a>
-    
+
     <a href="javascript:void(0);" class="icon" onclick="navToggle()">&#9776;</a>
 
     {% assign pages = site.pages | sort: 'order' %}
@@ -15,7 +15,8 @@
     {% endif %}
     {% endfor %}
 
-    <a href="/">Book Now</a>
+    <!-- FareHarbor book button for flow #53849 -->
+    <a href="https://fareharbor.com/embeds/book/yurtski/?full-items=yes&flow=53849">Book Now</a>
 
     <script type="text/javascript">
         function navToggle() {

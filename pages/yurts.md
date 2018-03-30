@@ -25,11 +25,14 @@ header: '/img/yurts-night-bg.jpg'
 
 <div class="flex-parent">
 	<div class="flex-child">
-		
+
 	</div>
 	<div class="flex-child">
 	</div>
 </div>
+
+<!-- FareHarbor calendar -->
+<script src="https://fareharbor.com/embeds/script/calendar/yurtski/?fallback=simple&full-items=yes"></script>
 
 
 {% include bottom_text.html %}

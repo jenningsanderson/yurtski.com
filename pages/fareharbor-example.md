@@ -8,6 +8,9 @@ header: '/img/yurts-night-bg.jpg'
 INTERNAL USE: FARE HARBOR BOOKING CALENDAR EXAMPLE
 
 <!-- FareHarbor calendar -->
+
+<script src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"></script>
+
 <script src="https://fareharbor.com/embeds/script/calendar/yurtski/?fallback=simple&full-items=yes"></script>
 
 

@@ -16,7 +16,6 @@ host: 'yurtski.checkfront.com',
 target: 'CHECKFRONT_WIDGET_01',
 category_id: '2',
 date: '20181201',
-end_date: '20190401',
 provider: 'droplet'
 }).render();
 </script>

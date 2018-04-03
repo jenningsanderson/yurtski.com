@@ -15,7 +15,7 @@ new DROPLET.Widget ({
 host: 'yurtski.checkfront.com',
 target: 'CHECKFRONT_WIDGET_01',
 category_id: '2',
-date: '20181201',
+date: '20181203',
 provider: 'droplet'
 }).render();
 </script>

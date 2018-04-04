@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	{% include head.html %}
+
+	<body>
+
+		<div class="page-header viewport-third header-img animation-fade-in animation--speed-1 align-center" style='background:url({{page.header}});background-size:cover;'>
+
+			<img class="animation-fade-in animation--speed-1 pagelogo" src="/img/yurtski-med.png" />
+
+		{% include navigation.html %}
+
+		</div>
+
+	    <section class="wrapper">
+
+	    	<div class="flex-parent">
+				<div class="flex-child flex-child--grow">
+
+					<h2 class="border-b pb6 mb12 align-center">{{page.title}}</h2>
+
+					{% if page.date %}
+
+					<script type="text/javascript" src="//yurtski.checkfront.com/lib/interface--31.js"></script>
+					<!-- CHECKFRONT BOOKING PLUGIN v23-->
+					<div id="CHECKFRONT_WIDGET_01"><p id="CHECKFRONT_LOADER" style="background: url('//yurtski.checkfront.com/images/loader.gif') left center no-repeat; padding: 5px 5px 5px 20px">Searching Availability...</p></div>
+					<script>
+					new DROPLET.Widget ({
+					host: 'yurtski.checkfront.com',
+					target: 'CHECKFRONT_WIDGET_01',
+					category_id: '4',
+					options: 'tabs,hidesearch,hidedates',
+					date: {{page.date}},
+					provider: 'droplet'
+					}).render();
+					</script>
+					<noscript><a href="https://yurtski.checkfront.com/reserve/" style="font-size: 16px">Continue to Secure Booking System &raquo;</a></noscript>
+
+					{% else %}
+
+						{{ content }}
+
+					{% endif %}
+
+					<div style="clear:both;">
+						<h2 class="pt12 mt24 border-t">Other Classes at YurtSki</h2>
+						{% for node in site.pages %}
+
+						  {% if node.layout == 'class' and page.url != node.url%}
+
+						    <div class="pt12">
+						      <a href="{{node.url}}" class="txt-h4 link">{{node.title}}</h4>
+						      <p>{{node.description}}</p>
+
+						    </div>
+
+						  {% endif %}
+
+						{% endfor %}
+
+					</div>
+
+				</div>
+
+				<aside class='flex-child flex-child--no-shrink w180 right-sidebar'>
+					{% include sidebar-right.html %}
+				</aside>
+	    	</div>
+
+	    </section>
+
+		{% include footer.html %}
+	</body>
+</html>

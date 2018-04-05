@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Packing List 
+title: Packing List
 permalink: /packing-list
 ---
 
@@ -20,7 +20,7 @@ permalink: /packing-list
 - Skis/ Splitboard & Skins (or snowboard and snowshoes)
 - Poles
 - GPS/Compass and Morrell Mountain Quad Map
-- First Aid Kid 
+- First Aid Kid
 - Sleeping Bag
 - Headlamp
 - Hat/Helmet
@@ -38,7 +38,7 @@ permalink: /packing-list
 - Radios
 
 ### Cell Phones
-There is spotty cell reception at the Yurt and along the ridge. Do not rely on having reception for navigation or communications. 
+There is spotty cell reception at the Yurt and along the ridge. Do not rely on having reception for navigation or communications.
 
 ### Questions about Packing
 

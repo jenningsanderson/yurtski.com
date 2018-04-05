@@ -1,17 +1,37 @@
 ---
 layout: page
-title: Classes at Yurtski
+title: Classes at Yurtski for the 2018 - 2019 Season
 permalink: /classes
+navigation_title: Classes
 header: '/img/yurts-night-bg.jpg'
 date: '20181207'
+order: 3
 ---
+
+<div class='flex-parent flex-parent--wrap'>
+
+	<div class='flex-child flex-child--no-shrink w360 pt24 px12'>
+    <p>We are very excited to continue offering classes and clinics at YurtSki.</p>
+
+    <p>Once we finalize the details with the instructors and organizers, booking information will be available at the links below.</p>
+
+    <p>In the meantime, be sure to checkout our <a target="_blank" class="link" href="//facebook.com/yurtski">Facebook Page</a> for the most up-to-date information.</p>
+
+	</div>
+
+	<div class='flex-child flex-child--no-shrink w360 pt24 px12'>
+		<img src='/img/classes.jpg'>
+	</div>
+</div>
+
+<h2 class="mt12 py12 border-b">Upcoming Classes &amp; Clinics: </h2>
 
 {% for page in site.pages %}
 
   {% if page.layout == 'class' %}
 
     <div class="pt12 px24 mb24">
-      <a href="{{page.url}}" class="txt-h4 link">{{page.title}}</h4>
+      <a href="#" class="txt-h4 link">{{page.title}}</a></h4>
       <p class="mt6">{{page.description}}</p>
 
     </div>
@@ -19,3 +39,5 @@ date: '20181207'
   {% endif %}
 
 {% endfor %}
+
+<p class="mt24 py12 border-t">If you'd like to run a course or clinic at YurtSki, please <a class="link" href="mailto:info@yurtski.com">contact us</a>, we'd love to work with you!</p>

@@ -12,7 +12,9 @@
   }
 
   img.bio{
-	  width:200px;
+	  width:250px;
+    margin: 0 auto;
+    text-align:center;
   }
 
   #splashlogo{
@@ -42,7 +44,7 @@
   nav#main a:not(:first-child) {
   	display: none;
   }
-  
+
   nav#main a.icon {
   	display:block;
     position:fixed;
@@ -51,7 +53,7 @@
     color:white;
     font-weight:400;
   }
-  
+
   nav#main a.logo {
     display: block;
     float:left;
@@ -62,7 +64,7 @@
   nav#main.responsive {
   	position: fixed;
   }
-  
+
   nav#main.responsive a {
     display: block;
     clear:both;
@@ -104,10 +106,9 @@
     font-size:18px;
     text-shadow:2px 2px 4px #000;
   }
-  
+
   iframe.embedded-video{
   width:400px;
   height:220px;
   }
 }
-

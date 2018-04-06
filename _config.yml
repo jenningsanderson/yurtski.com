@@ -21,6 +21,9 @@ permalink: pretty
 #   3rd Party Settings    #
 # ----------------------- #
 
+exclude: 
+ - publish
+
 social:
   - title: instagram
     url: http://instagram.com/yurtskimt

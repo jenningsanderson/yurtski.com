@@ -2,7 +2,7 @@
 layout: page
 title: Frequently Asked Questions
 navigation_title: FAQs
-permalink: /faq
+permalink: /faq/
 order: 5
 header: '/img/snowboarder.jpg'
 ---

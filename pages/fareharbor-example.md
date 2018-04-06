@@ -3,6 +3,7 @@ layout: page
 title: About The Yurts
 permalink: /fare
 header: '/img/yurts-night-bg.jpg'
+published: false
 ---
 
 INTERNAL USE: FARE HARBOR BOOKING CALENDAR EXAMPLE

@@ -1,3 +1,4 @@
 cd _site
 rm CNAME
+chmod -r a+r *
 scp -r * yurtskic@chi-node13.websitehostserver.net:public_html/

@@ -24,7 +24,7 @@ The Alpine Yurt sits at approximately 6800’ and the Lupine yurt sits at approx
 The Seeley-Swan area of Montana is known for its colder weather and heavier snow falls. This translates to incredible cold smoke powder skiing. On April 1st of 2009, we had almost 14 feet of snow pack, not fall at the Alpine Yurt. The average seems to be around 10 feet. Storms dumping multiple feet of snow are not uncommon.
 
 ### What is a gear haul?
-Take the weight of your back and off your mind. YurtSki will haul your group’s gear to the door of the yurt. Loads are limited to one 3’x8’ toboggan. $200 per extra load.
+Take the weight off your back and off your mind. YurtSki will haul your group’s gear to the door of the yurt. Loads are limited to one 3’x8’ toboggan. $200 per extra load.
 
 Gear haul includes a tow rope for your group from the parking lot across the first ~5 miles of road. From there, you will skin up 1.5 miles and 1500' with only a daypack, skipping miles of switchbacks and badly snow-drifted roads. While you're skinning up, our driver will deliver your gear to the yurts.
 

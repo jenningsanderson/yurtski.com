@@ -38,7 +38,7 @@ There is sleeping for up 6 to 8 people in each yurt. Sleeping arrangements inclu
 The immediate Yurtski terrain consists of a horseshoe shaped ridge that is separated into three main bowls by short finger ramps. The skiing in these areas ranges from steep cliff sections and chutes to mellow burnt tree runs which funnel back towards the yurts. There is also ample opportunity to tour the ridge and drop off the backside towards the Bob Marshall & Scapegoat Wilderness. Longer tours may decide to drop off the backside to a lake for lunch and laps.
 
 ### How do I book a trip?
-There are Book now buttons on every page of our website.  These buttons direct you to our booking service where you can do everything online! Upon completion of your reservation, We'll email you all the details you need to know for your upcoming trip.
+There are Book Now buttons on every page of our website.  These buttons direct you to our booking service where you can do everything online! Upon completion of your reservation, We'll email you all the details you need to know for your upcoming trip.
 
 ### Do we need to have avalanche equipment even if we’re not skiing?
 Yes. A beacon, shovel and probe are mandatory for anyone visiting the yurts. The Swan Mountains are avalanche country and need to be treated with respect. Avalanches can and do occur in the area.
@@ -50,7 +50,7 @@ Absolutely! Splitboards have made great strides in recent years and work quite w
 Cross-country skis are not recommended. There is A LOT of snow. Snowshoes seem to work for some snowboarders.
 
 ### What do you do for water?
-We utilize a mountain spring for drinking water. Drinking water can be retrieved on the way into the yurts and with gear hauls we will gather at least 5 gallons of water for your group. If your group is self sufficient, water jugs are recommended, as is a hatchet to break the ice that forms over the spring. We drink from the spring untreated; however this decision is ultimately yours. Boiling or treating water with iodine are good options. Otherwise, culinary/ washing water is gained from melting snow.
+We utilize a mountain spring for drinking water. Drinking water can be retrieved on the way into the yurts. With gear hauls, we will gather at least 5 gallons of water for your group. If not using gear haul, water jugs are recommended, as is a hatchet to break the ice that forms over the spring. We drink from the spring untreated; however this decision is ultimately yours. Boiling or treating water with iodine are good options. Otherwise, culinary/ washing water is gained from melting snow.
 
 ### Are the yurts heated?
 The yurts are heated by wood burning stoves and all firewood is provided. Inside the yurts there are wood bunks full of dry, split wood. Outside the yurts there are woodpiles where rounds can be found for splitting.
@@ -58,8 +58,8 @@ The yurts are heated by wood burning stoves and all firewood is provided. Inside
 ### What do I need to bring?
 <a class="link" href="/packing.html">Click here to see our suggested packing list.</a>
 
-What is supplied at the yurts?
-Yurtski provides a wood burning stove, firewood, ax, maul ax/splitting tool, cook stove, propane, lantern, white gas, pots, pans, plates, bowls, cups, cooking and eating utensils, kettle, snow melt pots, at least 5 gallons spring H20 for drinking (only if a gear haul is elected), sleeping mattresses/pads/cot/futon, Life flight extraction kit (helicopter specific backboard, splints, neck braces, emergency blanket, six man carry, basic first aid), super terrain
+### What is supplied at the yurts?
+Yurtski provides a wood burning stove, firewood, ax, maul ax/splitting tool, cook stove, propane, lantern, white gas, pots, pans, plates, bowls, cups, cooking and eating utensils, kettle, snow melt pots, at least 5 gallons of spring water for drinking (only if a gear haul is elected), sleeping mattresses/pads/cot/futon, Life flight extraction kit (helicopter specific backboard, splints, neck braces, emergency blanket, six man carry, basic first aid), and most importantly, super terrain!
 
 ### Is there an outhouse?
 There is a three sided outhouse located directly behind each yurt in order to answer nature’s call in relative comfort.

@@ -23,6 +23,7 @@ permalink: pretty
 
 exclude: 
  - publish
+ - timed-publish.py
 
 social:
   - title: instagram

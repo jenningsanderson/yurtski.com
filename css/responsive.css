@@ -11,6 +11,10 @@
   	display:none;
   }
 
+  div.only-on-mobile{
+    display:block;
+  }
+
   img.bio{
 	  width:250px;
     margin: 0 auto;

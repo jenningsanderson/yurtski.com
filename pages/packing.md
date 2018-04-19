@@ -33,7 +33,7 @@ permalink: /packing.html
 - Toiletries
 - Toilet Paper
 - Paper Towels / Rags
-- Food &amp Drink!
+- Food &amp; Drink!
 
 ### Recommended Additional Items
 - Yurt Slippers

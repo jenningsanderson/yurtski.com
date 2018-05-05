@@ -9,17 +9,26 @@
 			<img class="animation-fade-in animation--speed-1 pagelogo" src="/img/yurtski-med.png" />
 
 		{% include navigation.html %}
-
+			
 		</div>
 
 	    <section class="wrapper">
 
 	    	<div class="flex-parent">
+				
 				<div class="flex-child flex-child--grow">
 
-					<h2 class="border-b pb6 mb12 align-center">{{page.title}}</h2>
+					<p class="txt-s"><a class="link" href="/classes/#upcoming-classes">Classes @ YurtSki</a> > {{page.title}}</p>
 
-					{% if page.date %}
+					<h2 class="txt-h2 mt24 align-center">{{page.title}}</h2>
+
+					<h4 class="align-center py12 txt-h4 border-b">{{page.date_string}}</h4>
+
+					{{ page.content }}
+
+					<!-- Include the booking widget if there's a date set -->
+
+					{% if page.widget_date %}
 
 					<script type="text/javascript" src="//yurtski.checkfront.com/lib/interface--31.js"></script>
 					<!-- CHECKFRONT BOOKING PLUGIN v23-->
@@ -36,27 +45,11 @@
 					</script>
 					<noscript><a href="https://yurtski.checkfront.com/reserve/" style="font-size: 16px">Continue to Secure Booking System &raquo;</a></noscript>
 
-					{% else %}
-
-						{{ content }}
-
 					{% endif %}
 
-					<div style="clear:both;">
-						<h2 class="pt12 mt24 border-t">Other Classes at YurtSki</h2>
-						{% for node in site.pages %}
-
-						  {% if node.layout == 'class' and page.url != node.url%}
-
-						    <div class="pt12">
-						      <a href="{{node.url}}" class="txt-h4 link">{{node.title}}</h4>
-						      <p>{{node.description}}</p>
-
-						    </div>
-
-						  {% endif %}
-
-						{% endfor %}
+					<div class="mb24" style="clear:both;">
+						<h2 class="py12 border-t">All Classes at YurtSki</h2>
+						{% include list-classes.html %}
 
 					</div>
 

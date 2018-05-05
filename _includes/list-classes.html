@@ -1,0 +1,23 @@
+{% for node in site.pages %}
+
+  {% if node.layout == 'class' %} 
+
+  	
+  	{% if page.url != node.url %}
+
+	  <a class="bg-darken10-on-hover block link px12 py12 mb12" href="{{node.url}}">
+
+    {% elsif page.url == node.url %}
+	
+	  <a class="block link bg-darken10 py12 px12 mb12" href="#">
+
+    {% endif %}
+        <p class="txt-h4 link">{{node.title}}</p>
+        <p class="ml12 my3">{{node.date_string}}</p>
+		<p class="ml12 txt-m">{{node.description}}</p>
+
+    </a>
+
+    {% endif %}
+
+{% endfor %}

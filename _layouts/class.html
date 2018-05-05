@@ -22,7 +22,7 @@
 
 					<h2 class="txt-h2 mt24 align-center">{{page.title}}</h2>
 
-					<h4 class="align-center py12 txt-h4 border-b">{{page.date_string}}</h4>
+					<h4 class="align-center py12 txt-h4 border-b mb12">{{page.date_string}}</h4>
 
 					{{ page.content }}
 
@@ -39,7 +39,7 @@
 					target: 'CHECKFRONT_WIDGET_01',
 					category_id: '4',
 					options: 'tabs,hidesearch,hidedates',
-					date: {{page.date}},
+					date: {{page.widget_date}},
 					provider: 'droplet'
 					}).render();
 					</script>

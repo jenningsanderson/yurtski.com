@@ -1,0 +1,112 @@
+/*
+  Responsive Navigation
+*/
+
+/* All Standards */
+nav#main div#nav-buttons.responsive a {
+  display: block;
+  clear:both;
+}
+
+nav#main div#nav-buttons a:hover:not(.icon){
+  background-color:#01AEF3;
+  text-shadow:2px 2px 4px #555;
+  animation-name: resaturate;
+  animation-duration: 0.5s;
+}
+
+nav#main div#nav-buttons a{
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0px;
+  display:inline-block;
+  color:white;
+  padding: 15px 5px 15px 5px;
+  margin:0 6px;
+  font-size:18px;
+  text-shadow:1px 2px 4px #000;
+}
+
+nav#main{
+  background-color:rgba(25,25,25,0.75);
+  text-align:center;
+  position:fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index:3;
+  bottom:unset;
+}
+
+nav#main div#nav-buttons a {
+  display: none;
+}
+nav#main a.icon {
+  display:block;
+  position:fixed;
+  top:0px;
+  right:0px;
+  color:white;
+  font-weight:400;
+  font-size:3em;
+  text-decoration:none;
+  background-color:rgba(0,0,0,0.5);
+  padding:10px;
+  padding-right:50px;
+  border-radius: 0px 0px 0px 15px;
+}
+
+nav#main div#nav-buttons.responsive a.icon {
+  display:block;
+  position:fixed;
+  top:10px;
+  right:10px;
+  color:white;
+  font-weight:400;
+}
+
+nav#main div#nav-buttons a.active{
+  color:#FCF900;
+}
+
+
+/*
+    Expansion 1: Show Tight Menu
+*/
+@media screen and (min-width: 660px) {
+  /* A major override for everything */
+  div#nav-buttons.container{
+    width:100%;
+    padding: 0px 6px
+  }
+  /* Put it down where it belongs */
+  nav#main{
+    position:relative;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  /* Hide hamburger */
+  nav#main a.icon {
+    display: none;
+  }
+
+  nav#main div#nav-buttons a{
+  	display:inline-block;
+  	padding: 5px 5px 5px 5px;
+  	margin:0 6px;
+    font-size:16px;
+  	text-shadow:1px 2px 4px #000;
+  }
+}
+
+/* Expansion 2: Desktop */
+@media only screen and (min-width: 1000px){
+
+	nav#main div#nav-buttons a{
+		letter-spacing: 2px;
+		padding: 10px 2px 10px 2px;
+		margin:0 2%;
+		font-size:18px;
+		text-shadow:2px 2px 4px #000;
+	}
+}

@@ -1,27 +1,28 @@
-<nav id='main' class="topnav" role="navigation">
-
-    <!-- <a class="logo" href="/">YurtSki</a> -->
+<nav id="main" class="u-full-width" role="navigation">
 
     <a href="javascript:void(0);" class="icon" onclick="navToggle()">&#9776;</a>
 
-    {% assign pages = site.pages | sort: 'order' %}
-    {% for node in pages %}
-    {% if node.navigation_title %}
-        {% if page.url == node.url %}
-            <a href="{{node.url}}" class="active">{{node.navigation_title}}</a>
-        {% else %}
-            <a class="" href="{{node.url}}">{{node.navigation_title}}</a>
+    <div id='nav-buttons' class="container">
+
+        {% assign pages = site.pages | sort: 'order' %}
+        {% for node in pages %}
+        {% if node.navigation_title %}
+            {% if page.url == node.url %}
+                <a href="{{node.url}}" class="active">{{node.navigation_title}}</a>
+            {% else %}
+                <a class="" href="{{node.url}}">{{node.navigation_title}}</a>
+            {% endif %}
         {% endif %}
-    {% endif %}
-    {% endfor %}
+        {% endfor %}
+    </div>
 
     <script type="text/javascript">
         function navToggle() {
-            var x = document.getElementById("main");
-            if (x.className === "topnav") {
-                x.className += " responsive";
+            var x = document.getElementById("nav-buttons");
+            if (x.className === "container") {
+                x.className = "u-full-width responsive";
             } else {
-                x.className = "topnav";
+                x.className = "container";
             }
         }
     </script>

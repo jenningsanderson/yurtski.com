@@ -4,14 +4,6 @@ title: YurtSki Maps
 permalink: /maps.html
 ---
 
-<style>
-	li{
-		margin-left:20px;
-	}
-	li::before{
-		content: "☐ ";
-	}
-</style>
 
 ## Getting to the Trailhead
 
@@ -23,14 +15,12 @@ View the PDF
 
 ### Installing the map on your Phone
 
+(Do this before you leave your house, once installed, you do not need to have cell service for the map to work)
+
 1. Download the app Avenza Maps from iTunes or Android app store
 
 2. <a target="_blank" href="assets/YurtSki_TrailMap.pdf">Open the map here</a>.
 
-3. 
-Click the share box at the top scroll through the options until you see “Copy to Avenza Maps”
-Click “Copy to Avenza Maps”
-Map has now been copied to Avenza Maps!!!
-When you are located within the map a blue dot will show where you are!
-You do not need to have service for this to work
+3. Click on the share icon and choose "Copy to Avenza Maps"
 
+The map is now copied to Avenza Maps and when you're at the yurt the blue dot will show up on the map! 

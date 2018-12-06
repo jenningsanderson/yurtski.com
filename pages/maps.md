@@ -1,7 +1,7 @@
 ---
 layout: page
 title: YurtSki Maps
-permalink: /maps
+permalink: /maps/
 ---
 
 

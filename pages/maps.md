@@ -29,7 +29,7 @@ The yurts are located about 5 miles up the Morrell Mountain Lookout road. The fo
 
 <div class="flex-parent flex-parent--wrap">
 	<div class="px12 mr12  border border--gray-light flex-child flex-child--no-shrink">
-		<a class="link" target="_blank" href="/assets/YurtSki-TH-to-Yurts.pdf">
+		<a class="link" target="_blank" href="/assets/YurtSki_TH-to-Yurts.pdf">
 			<img src="/img/to-the-yurt-thumbnail.png" />
 			<p class="align-center">1. Trailhead to the yurts</p>
 		</a>

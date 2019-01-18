@@ -2,10 +2,15 @@
 layout: page
 title: YurtSki Maps
 permalink: /maps/
+header: '/img/bowl-small.jpeg'
 ---
 
 
 ## Trailhead
+<p class="px6 py6 mt6 border bg-red-faint round-bold border--red"><strong>Important:</strong> There are salvage logging operations during winter 2019 that may plow the Cottonwood Lakes Road, making over-snow travel from the standard trailhead impossible. When this happens, YurtSki guests have permission to drive in further to our temporary parking area at the <em>Morrell Mountain Road</em> turnoff. <a target="_blank" class='link' href="/assets/YurtSki-TempParking.pdf">See this map for details.</a>
+
+<br><em>Please yield to logging operations when driving this road.</em></p>
+
 <!-- TODO: Stretch middle -->
 <div class="flex-parent flex-parent--wrap border-b border--gray-light">
 	<div class="px12 mr12 flex-child flex-child--no-shrink w300">
@@ -29,9 +34,10 @@ The yurts are located about 5 miles up the Morrell Mountain Lookout road. The fo
 
 <div class="flex-parent flex-parent--wrap">
 	<div class="px12 mr12  border border--gray-light flex-child flex-child--no-shrink">
-		<a class="link" target="_blank" href="/assets/YurtSki_TH-to-Yurts.pdf">
+		<!-- <a class="link" target="_blank" href="/assets/YurtSki_TH-to-Yurts.pdf"> -->
+		<a class="link" target="_blank" href="/assets/YurtSki-TempParking.pdf">
 			<img src="/img/to-the-yurt-thumbnail.png" />
-			<p class="align-center">1. Trailhead to the yurts</p>
+			<p class="align-center">1. Trailhead/Temp Parking to the yurts</p>
 		</a>
 	</div>
 	<div class="px12 border border--gray-light flex-child flex-child--no-shrink">

@@ -7,12 +7,13 @@ header: '/img/bowl-small.jpeg'
 
 
 ## Trailhead
-<p class="px6 py6 mt6 border bg-red-faint round-bold border--red"><strong>Important:</strong> There are salvage logging operations during winter 2019 that may plow the Cottonwood Lakes Road, making over-snow travel from the standard trailhead impossible. When this happens, YurtSki guests have permission to drive in further to our temporary parking area at the <em>Morrell Mountain Road</em> turnoff. <a target="_blank" class='link' href="/assets/YurtSki-TempParking.pdf">See this map for details.</a>
 
-<br><em>Please yield to logging operations when driving this road.</em></p>
+<!-- <p class="px6 py6 mt6 border bg-red-faint round-bold border--red"><strong>Important:</strong> There are salvage logging operations during winter 2019 that may plow the Cottonwood Lakes Road, making over-snow travel from the standard trailhead impossible. When this happens, YurtSki guests have permission to drive in further to our temporary parking area at the <em>Morrell Mountain Road</em> turnoff. <a target="_blank" class='link' href="/assets/YurtSki-TempParking.pdf">See this map for details.</a>
+
+<br><em>Please yield to logging operations when driving this road.</em></p> -->
 
 <!-- TODO: Stretch middle -->
-<div class="flex-parent flex-parent--wrap border-b border--gray-light">
+<div class="flex-parent flex-parent--wrap">
 	<div class="px12 mr12 flex-child flex-child--no-shrink w300">
 		<p class="mt12"> The YurtSki parking lot is located a few hundred yards past <a class='link' href="https://www.google.com/maps/place/Rich's+Montana+Guest+Ranch/@47.118153,-113.323631,15z/data=!4m2!3m1!1s0x0:0x9aa50a6ebe7bcf5e?ved=2ahUKEwi3qZeQ-obfAhVojVQKHRZZAEYQ_BIwFnoECAYQCA">Rich's Montana Guest Ranch</a> on the Cottonwood Lakes road. You will see a large white enclosed snowmobile trailer on the right and a parking spaces to your left. Please  carpool with other members of your party as the shared parking area is not very large.</p>
 	</div>
@@ -24,8 +25,12 @@ header: '/img/bowl-small.jpeg'
 	</div>
 </div>
 
+<div class="py3 px3 border round-bold border--red">
 
-<hr>
+<iframe style="width:100%; height:280px;" src="https://docs.google.com/document/d/e/2PACX-1vTRrXScXdwO4lu-_cL4pBFTKHgMp4AJTRxTIjQQTmMyrv-jnWWtVHxfJ50NXWTyjwTfzU26F5b4tLRr/pub?embedded=true"></iframe>
+
+</div>
+
 <br>
 
 ## Yurts
@@ -61,7 +66,7 @@ The yurts are located about 5 miles up the Morrell Mountain Lookout road. The fo
 	</li>
 	<li class="txt-li"> Open the following maps on your phone:
 		<ul>
-			<li><a class="link" target="_blank" href="/assets/YurtSki_TH-to-Yurts.pdf">1. Trailhead to Yurts Map</a></li>
+			<li><a class="link" target="_blank" href="/assets/YurtSki-TempParking.pdf">1. Trailhead to Yurts Map</a></li>
 			<li><a class="link" target="_blank" href="/assets/YurtSki_TrailMap.pdf"> 2. YurtSki Ski Runs Map</a></li>
 		</ul>
 	</li>

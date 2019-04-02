@@ -134,6 +134,14 @@ h5{
 	margin-bottom:0.5rem;
 }
 
+h5.border-b{
+	border-bottom: 1px solid #999;
+}
+
+h4.border-b{
+	border-bottom: 2px solid #999;
+}
+
 .yurtski-blue{
 	color:#66ABDF;
 }
@@ -203,6 +211,7 @@ iframe.embedded-video{
 
 .caption{
 	font-style:italic;
+	font-size: 1.25rem;
 }
 
 

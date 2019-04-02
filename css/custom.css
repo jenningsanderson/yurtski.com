@@ -1,0 +1,420 @@
+/*
+	Section 1. Headers
+*/
+
+header{
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h1.page-title{
+	text-align:left;
+	padding: 25px 0px 0px 0px;
+	font-size:2em;
+	font-weight:bold;
+
+	/*display:inline-block;*/
+	/*max-width:69%;*/
+	/*text-align:center;*/
+	/*letter-spacing:0.2em;*/
+	/*font-family: 'Gravitas One', cursive;*/
+	/*color:#DDD;*/
+    -webkit-text-fill-color: #333; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #DDD;
+    /*text-shadow: 1px 1px 4px lightblue;*/
+
+
+}
+
+h3.page-subtitle{
+	display:none;
+	font-style:italic;
+	text-align:right;
+
+	/*-webkit-text-fill-color: #333;  Will override color (regardless of order) 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #DDD;
+*/
+    background-color:rgba(255,255,255,0.75);
+    padding: 5px 10px;
+
+}
+
+div.title-box{
+	display:inline-block;
+  	margin: 0 auto;
+  	text-align:center;
+}
+
+img.sub-header-logo{
+	display:inline-block;
+	z-index:10;
+	height:75px;
+	vertical-align: top;
+}
+
+/* Responsive, pretty header */
+@media(min-width: 400px){
+	h1.page-title{
+		font-size:2.5em;
+	}
+	img.sub-header-logo{
+		height:100px;
+	}
+}
+
+@media(min-width: 600px){
+	h1.page-title{
+		font-size:4em;
+	}
+	img.sub-header-logo{
+		height:150px;
+	}
+}
+
+@media(min-width:800px){
+	div.title-box{
+		padding-top:20px;
+	}
+	h3.page-subtitle{
+		display:inline-block;
+	}
+}
+
+div.header-container{
+		position: relative;
+	    /*width: 100%;*/
+	    max-width: 960px;
+	    margin: 0 auto;
+	    /* padding: 0 20px; */
+	    box-sizing: border-box;
+	}
+
+
+@media(min-width: 1000px){
+	img.sub-header-logo{
+		height:250px;
+		margin-left:10px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+	Section 2: Layouts & Standards;
+
+*/
+
+p{margin-bottom:1rem;}
+
+p.small{
+	font-size:0.75em;
+}
+
+h5{
+	margin-bottom:0.5rem;
+}
+
+.yurtski-blue{
+	color:#66ABDF;
+}
+
+.yurtski-yellow{
+	color:#F6EF2A;
+}
+
+
+.bg-yurtski-blue{
+	background-color:#66ABDF;
+	color:#FFF;
+}
+
+.page-main-content{
+	min-height: 50vh;
+	padding: 0px 4px;
+}
+
+div.yurt{
+	padding: 10px;
+}
+
+.attribution{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	margin:0px;
+	color:#999;
+	background-color:rgba(255,255,255,.5);
+	font-size:0.5rem;
+	text-decoration:none;
+}
+
+div.table{
+	max-width:320px;
+	overflow: scroll;
+}
+
+.container{
+	padding-left:6px;
+	padding-right:6px;
+}
+
+@media (min-width: 400px) {
+
+	.container{
+		padding: 0px;
+	}
+
+	div.table{
+		max-width:100%;
+	}
+}
+
+iframe.embedded-video{
+  width:320px;
+  height:200px;
+}
+
+@media screen and (min-width: 660px){
+  iframe.embedded-video{
+  	width:560px;
+	height:315px;
+  }
+}
+
+.caption{
+	font-style:italic;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+	Section 3: Callouts and Objects
+
+*/
+
+div.call-to-action{
+	position:relative;
+	margin:5px 0px;
+	background-size: cover;
+	height:150px;
+}
+
+div.call-to-action h4{
+	position:absolute;
+	right:0;
+	left:0;
+	color: black;
+	top: 50px;
+	background-color:rgba(255,255,255,0.85);
+	padding:10px;
+	text-transform: uppercase;
+	font-style:italic;
+	font-size:2rem;
+}
+
+@media (min-width: 600px) {
+	div.call-to-action{
+		height:250px;
+	}
+
+	div.call-to-action h4{
+		top: 140px;
+		padding:20px;
+		text-transform: uppercase;
+		font-style:italic;
+		font-size:2.75rem;
+	}
+}
+
+
+
+img.social{
+	filter: grayscale(100%);
+}
+
+img.social:hover{
+	filter: grayscale(0%);
+	cursor:pointer;
+	animation-name: resaturate;
+    animation-duration: 0.5s;
+}
+
+.focus-box{
+	margin-left:10px;
+	border-radius:5px;
+	border: 2px solid #AAA;
+	max-width:600px;
+	position: relative;
+	margin-bottom:30px;
+}
+
+.focus-box h5{
+	/*background-color: #66ABDF;*/
+	background-color: #AAA;
+	color: white;
+	margin:0;
+	padding:0px 5px;
+}
+
+.focus-box h6.focus-emphasis{
+	font-size: 1.2em;
+	margin:0;
+	padding:0px 5px;
+}
+
+.focus-box p{
+	padding-left:5px;
+}
+
+.sold-out{
+	background-color:orangered;
+	color: #EEE;
+}
+
+.location{
+	font-style:italic;
+	font-weight:800;
+}
+
+div.breadcrumbs{
+	font-size:1.25rem;
+	padding: 5px;
+}
+
+div.breadcrumbs a{
+	/*background-color: lightgray;*/
+	padding: 2px;
+	border-radius: 2px;
+	text-decoration:none;
+}
+
+div.breadcrumbs a:hover{
+	background-color: lightgray;
+}
+
+.map-library{
+	text-align:center;
+	margin-top:25px;
+	border: 3px solid #66ABDF;
+	padding: 2px;
+}
+
+.toggle{
+	padding: 0px;
+	display: inline-block;
+	margin-top: -15px;
+	background-color:white;
+	border-radius: 3px;
+	color: #66ABDF;
+	border: 1px solid #66ABDF;
+}
+
+div.toggle h4{
+	display:inline-block;
+	padding: 5px 20px;
+	margin: 0px;
+}
+
+div.toggle h4:hover{
+	background-color: #66ABDF;
+	color: white;
+	cursor: pointer;
+}
+
+.toggle .chosen{
+	background-color:#66ABDF;
+	color: white;
+}
+
+.banner-box{
+	border: 2px solid #66ABDF;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.faq-section{
+	font-size:2.5rem;
+	margin-top:25px;
+	margin-bottom:2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+	Section 4: Footers 
+
+*/
+
+
+footer{
+	padding-top: 5px;
+	background-color:lightgray;
+	overflow:scroll;
+}
+
+footer div input.email{
+	max-width:300px;
+}
+
+footer hr{
+	margin-top:0rem;
+	margin-bottom:1.5rem;
+
+}
+

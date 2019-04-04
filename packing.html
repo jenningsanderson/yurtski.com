@@ -165,6 +165,80 @@
 </header>
 
 <body>
+  <style>
+#banner{
+	position:relative;
+	width:100%;
+	/*z-index:10;*/
+	left:0;
+	right:0;
+	background-color:#444;
+	/*padding-left:10px;*/
+	text-align:center;
+	border-bottom:2px solid white;
+	border-top:2px solid white;
+	text-align:center;
+}
+
+#banner h6{
+	font-style: italic;
+	padding:2px;
+	margin:0px;
+	padding-left:10px;
+	color: white;
+	text-align:left;
+	font-size:0.75rem;
+}
+
+@media(min-width: 400px){
+	#banner h6{
+		font-size:1.5rem;
+		text-align:center;
+		width:600px;
+		margin: 0 auto;
+	}
+}
+
+.banner-link{
+	background-color:#66ABDF;
+	color: #EEE;
+	border-radius:5px;
+	padding:5px;
+	text-decoration:none;
+}
+
+.banner-link:hover{
+	color:#FFF;
+}
+
+#close-button{
+	background-color:maroon;
+	color:white;
+	padding: 3px 9px;
+	border-radius:3px;
+	float:right;
+	z-index:10;
+	display:inline-block;
+	margin:10px 30px;
+	border: 1px solid white;
+}
+
+#close-button:hover{
+	background-color:darkred;
+	cursor:pointer;
+}
+
+</style>
+<div id="banner">
+	<p id='close-button'>x</p>
+	<h6>Interested in Backcountry Medicine? Take an AERIE course at the Big Belt Hut this summer!  <a href="http://montanabackcountryyurts.com/classes#summer">Wilderness First Aid + CPR and Wilderness First Responder</a></h6>
+	
+</div>
+<script>
+	document.getElementById('close-button').addEventListener('click',function(){
+		document.getElementById('banner').style.display='none';	
+	})
+</script>
   <section class="container row">
     <div class="ten columns">
       <div class="breadcrumbs">

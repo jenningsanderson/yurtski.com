@@ -290,17 +290,20 @@ img.social:hover{
 }
 
 .focus-box{
-	margin-left:10px;
+	display:inline-block;
+	margin: 10px;
 	border-radius:5px;
-	border: 2px solid #AAA;
-	max-width:600px;
+	border: 2px solid #66ABDF;
+	max-width:400px;
+	min-width:320px;
 	position: relative;
 	margin-bottom:30px;
+	text-align:left;
 }
 
 .focus-box h5{
-	/*background-color: #66ABDF;*/
-	background-color: #AAA;
+	background-color: #66ABDF;
+	/*background-color: #AAA;*/
 	color: white;
 	margin:0;
 	padding:0px 5px;

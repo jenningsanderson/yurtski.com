@@ -10,7 +10,7 @@ window.addEventListener('load', function(){
   window.addEventListener('scroll',function(e){
     {
       scrollTop = window.pageYOffset
-      if (scrollTop >= 280){
+      if (scrollTop >= 255){
         if(!isFixed){
           navBar.style = "position:fixed; top:0;"
           // content.style = "margin-top:55px;"

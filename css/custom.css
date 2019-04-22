@@ -5,6 +5,7 @@
 header{
 	background-repeat: no-repeat;
 	background-size: cover;
+	line-height:1.25;
 }
 
 h1.page-title{
@@ -47,6 +48,10 @@ div.title-box{
   	text-align:center;
 }
 
+img.header-logo{
+	margin: 0px auto;
+}
+
 img.sub-header-logo{
 	display:inline-block;
 	z-index:10;
@@ -79,6 +84,9 @@ img.sub-header-logo{
 	}
 	h3.page-subtitle{
 		display:inline-block;
+	}
+	header{
+		min-height:303px;
 	}
 }
 

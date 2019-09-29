@@ -53,6 +53,10 @@
 	padding:0px;
 }
 
+.p6{
+	padding:6px;
+}
+
 .px36{
   padding-right:36px;
   padding-left:36px;
@@ -103,4 +107,12 @@ img.max-500{
 
 .no-underline{
 	text-decoration:none;
+}
+
+.white-text{
+	color:white;
+}
+
+.fade-background{
+	background-color:rgba(50,50,50,0.9);
 }

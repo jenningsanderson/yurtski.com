@@ -132,13 +132,26 @@ div.header-container{
 
 */
 
+body{
+	font-size:14px;
+}
+
 p{margin-bottom:1rem;}
 
 p.small{
 	font-size:0.75em;
 }
 
+h3{
+	font-size:2em;
+}
+
+h4{
+	font-size:1.8em;
+}
+
 h5{
+	font-size:1.5em;
 	margin-bottom:0.5rem;
 }
 
@@ -157,7 +170,6 @@ h4.border-b{
 .yurtski-yellow{
 	color:#F6EF2A;
 }
-
 
 .bg-yurtski-blue{
 	background-color:#66ABDF;
@@ -222,7 +234,9 @@ iframe.embedded-video{
 	font-size: 1.25rem;
 }
 
-
+table{
+	font-size:0.8em;
+}
 
 
 
@@ -284,8 +298,6 @@ div.call-to-action h4{
 	}
 }
 
-
-
 img.social{
 	filter: grayscale(100%);
 }
@@ -294,7 +306,7 @@ img.social:hover{
 	filter: grayscale(0%);
 	cursor:pointer;
 	animation-name: resaturate;
-    animation-duration: 0.5s;
+    animation-duration: 0.25s;
 }
 
 .focus-box{
@@ -335,6 +347,18 @@ img.social:hover{
 .location{
 	font-style:italic;
 	font-weight:800;
+}
+
+.hero-button{
+	font-size:1.5em;
+	font-family:sans-serif;
+	margin: 4px 0px;
+	padding: 0px 10px;
+	text-transform:none;
+}
+
+.no-border{
+	border:none;
 }
 
 div.breadcrumbs{
@@ -399,7 +423,18 @@ div.toggle h4:hover{
 	margin-bottom:2px;
 }
 
+div.tile-button{
+	border-radius:5px;
+}
 
+div.tile-button:hover{
+	/*border: 1px solid white;*/
+	background-color:rgba(255,255,255,0.4);
+}
+
+div.tile-button h3:hover{
+	color:yellow;
+}
 
 
 

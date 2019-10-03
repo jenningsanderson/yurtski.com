@@ -441,6 +441,10 @@ div.tile-button a:hover{
 	color:yellow;
 }
 
+a div.tile-button h3:hover{
+	color:yellow;
+}
+
 
 
 div.tile-button:hover{

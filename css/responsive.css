@@ -50,6 +50,13 @@ img.header-logo{
         max-width:150px;
     }
 
+    .no-shrink-on-mobile{
+        text-align:center;
+        padding-left:2px;
+        padding-right:2px;
+        width:33%;
+    }
+
     ul.sidebar-links li a.button{
         width:100%;
     }

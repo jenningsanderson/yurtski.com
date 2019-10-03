@@ -116,3 +116,11 @@ img.max-500{
 .fade-background{
 	background-color:rgba(50,50,50,0.9);
 }
+
+.color-orange{
+	color:orange;
+}
+
+.italic{
+	font-style:italic;
+}

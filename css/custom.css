@@ -238,22 +238,15 @@ table{
 	font-size:0.8em;
 }
 
+td a.button{
+	font-size:0.7em;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (min-width: 660px){
+  table{
+	font-size:1em;
+}
+}
 
 
 
@@ -268,7 +261,7 @@ div.call-to-action{
 	position:relative;
 	margin:5px 0px;
 	background-size: cover;
-	height:150px;
+	height:100px;
 }
 
 div.call-to-action h4{
@@ -276,11 +269,12 @@ div.call-to-action h4{
 	right:0;
 	left:0;
 	color: black;
-	top: 50px;
+	top: 30px;
 	background-color:rgba(255,255,255,0.85);
 	padding:10px;
 	text-transform: uppercase;
 	font-style:italic;
+	font-stretch: ultra-expanded;
 	font-size:2rem;
 }
 
@@ -294,6 +288,7 @@ div.call-to-action h4{
 		padding:20px;
 		text-transform: uppercase;
 		font-style:italic;
+		font-stretch: extra-expanded;
 		font-size:2.75rem;
 	}
 }
@@ -457,8 +452,7 @@ div.tile-button:hover{
 
 .hero-button{
 	margin: 4px 0px;
-	padding: 0px 10px;
-	
+	padding: 0px 10px;	
 }
 
 
@@ -482,8 +476,26 @@ div.tile-button:hover{
 }
 
 
+.info-expand{
+	z-index:100;
+	margin-left: 10px;
+	background-color:white;
+}
+
+.description-box{
+  z-index:1;
+  margin-top: -20px;
+  padding: 15px;
+  background-color:#FCFCFC;
+  border: 2px solid orange;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
 
 
+.rounded{
+	border-radius: 5px;˚
+}
 
 
 

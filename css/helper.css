@@ -124,3 +124,14 @@ img.max-500{
 .italic{
 	font-style:italic;
 }
+
+.inline{
+	display:inline-block;
+}
+
+.h6{
+	font-size: 1.5rem;
+	line-height: 1.6;
+    letter-spacing: 0;
+    font-weight: bold;
+}

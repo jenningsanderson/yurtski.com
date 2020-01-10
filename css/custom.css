@@ -381,19 +381,19 @@ div.breadcrumbs a:hover{
 	border: 1px solid #66ABDF;
 }
 
-div.toggle h4{
+div.toggle h4,h5,h6{
 	display:inline-block;
 	padding: 5px 20px;
 	margin: 0px;
 }
 
-div.toggle h4:hover{
+div.toggle h4:hover,h5:hover,h6:hover{
 	background-color: #66ABDF;
 	color: white;
 	cursor: pointer;
 }
 
-.toggle .chosen{
+div.toggle h5.chosen, h6.chosen, h4.chosen{
 	background-color:#66ABDF;
 	color: white;
 }
@@ -408,6 +408,16 @@ div.toggle h4:hover{
 	padding: 0px 0px;
 	margin: 0px 0px;
 	font-weight:bold;
+}
+
+.highlight-border{
+	border: 3px solid #ddd;
+	border-radius: 3px;
+	padding: 1px;
+}
+
+.highlight-border:hover{
+	border: 3px solid #66ABDF;
 }
 
 .faq-section{

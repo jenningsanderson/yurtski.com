@@ -1,4 +1,25 @@
-console.log('page loaded')
+console.log('Page loaded; kicking off Javascript...')
+
+var HASH;
+
+try{
+  HASH = window.location.hash
+}catch(e){
+  console.warn("window.location.hash function not enabled; failing gracefully")
+}
+
+if (HASH){
+  console.log(HASH)
+}
+
+function hideParent(elem, level=0){
+  var parent = elem.parentElement;
+
+  for(var i=0; i<level; i++){
+    parent = parent.parentElement;
+  }
+  parent.style.display = 'none';  
+}
 
 var nonMobile = window.matchMedia("(min-width: 900px)")
 

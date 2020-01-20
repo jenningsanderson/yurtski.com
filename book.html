@@ -266,66 +266,95 @@
 	
 <!-- : Catch the corn-skiing this Spring at 25% off with promo code: <em>SUMMERHUT</em></p> -->
 
-<br id="alpine">
-
-	<div class="align-center">
-		<div class="toggle">
-			<a href="#alpine"><h5 class="chosen">Alpine Yurt</h5></a>
-			<a href="#lupine"><h5>Lupine Yurt</h5></a>
-		</div>
-	</div>
-
-	<!-- <h5 class="align-left">Book the Alpine Yurt</h5> -->
-
-	<script type="text/javascript" src="//yurtski.checkfront.com/lib/interface--0.js"></script>
-	
-	<!-- CHECKFRONT BOOKING PLUGIN v25-->
-	<div id="CHECKFRONT_WIDGET_01"><p id="CHECKFRONT_LOADER" style="background: url('//yurtski.checkfront.com/images/loader.gif') left center no-repeat; padding: 5px 5px 5px 20px">Searching Availability...</p></div>
-	<script>
-	new DROPLET.Widget ({
-	host: 'yurtski.checkfront.com',
-	target: 'CHECKFRONT_WIDGET_01',
-	item_id: '4',
-	category_id: '2',
-	// date: '20190108',
-	// options: 'hidedates',
-	pipe: 'https://montanabackcountryyurts.com/assets/checkfront-helper.html',
-	provider: 'droplet'
-	}).render();
-	</script>
-	<noscript><a href="https://yurtski.checkfront.com/reserve/" style="font-size: 16px">Continue to Secure Booking System &raquo;</a></noscript>
-
-
-<hr id="lupine"><br><br>
-
-<div class="align-center">
-	<div class="toggle">
-		<a href="#alpine"><h5>Alpine Yurt</h5></a>
-		<a href="#lupine"><h5 class="chosen">Lupine Yurt</h5></a>
+<br>
+<div class="align-center mb6">
+	<div class="toggle w3-animate-opacity">
+		<a href="#alpine"><h5 id="alpine-button" onclick="chooseAlpine(this)"> Alpine Yurt</h5></a>
+		<a href="#lupine"><h5 id="lupine-button" onclick="chooseLupine(this)"> Lupine Yurt</h5></a>
 	</div>
 </div>
 
-<!-- <h5 class="align-left">Book the Lupine Yurt</h5> -->
 
-<script type="text/javascript" src="//yurtski.checkfront.com/lib/interface--0.js"></script>
+<div id="book-alpine-yurt">
+
+	<script type="text/javascript" src="//yurtski.checkfront.com/lib/interface--0.js"></script>
+
 <!-- CHECKFRONT BOOKING PLUGIN v25-->
-<div id="CHECKFRONT_WIDGET_02"><p id="CHECKFRONT_LOADER" style="background: url('//yurtski.checkfront.com/images/loader.gif') left center no-repeat; padding: 5px 5px 5px 20px">Searching Availability...</p></div>
+<div id="CHECKFRONT_WIDGET_01">
+	<p id="CHECKFRONT_LOADER" style="background: url('//yurtski.checkfront.com/images/loader.gif') left center no-repeat; padding: 5px 5px 5px 20px">Searching Availability...</p></div>
+<script>
+new DROPLET.Widget ({
+host: 'yurtski.checkfront.com',
+target: 'CHECKFRONT_WIDGET_01',
+item_id: '4',
+// date: '20190108',
+pipe: 'https://montanabackcountryyurts.com/assets/checkfront-helper.html',
+provider: 'droplet'
+}).render();
+</script>
+<noscript><a href="https://yurtski.checkfront.com/reserve/" style="font-size: 16px">Continue to Secure Booking System &raquo;</a></noscript>
+	<hr>
+</div>
+
+
+<div id="book-lupine-yurt">
+
+	<script type="text/javascript" src="//yurtski.checkfront.com/lib/interface--0.js"></script>
+
+<!-- CHECKFRONT BOOKING PLUGIN v25-->
+<div id="CHECKFRONT_WIDGET_02">
+	<p id="CHECKFRONT_LOADER" style="background: url('//yurtski.checkfront.com/images/loader.gif') left center no-repeat; padding: 5px 5px 5px 20px">Searching Availability...</p></div>
 <script>
 new DROPLET.Widget ({
 host: 'yurtski.checkfront.com',
 target: 'CHECKFRONT_WIDGET_02',
 item_id: '2',
-// options: 'hidedates',
+// date: '20190108',
 category_id: '2',
 pipe: 'https://montanabackcountryyurts.com/assets/checkfront-helper.html',
-// date: '20191203',
 provider: 'droplet'
 }).render();
 </script>
+
+	<hr>
+</div>
+
 	
-<br><br>
-<h6 class='align-center'>You can also purchase <a class='simple-link' href="//montanabackcountryyurts.com/gift.html">Gift Certificates</a> if you'd like to give a trip to someone else</h6>
+<br>
+<h6 class='align-center'>You can also purchase <a class='simple-link' href="//montanabackcountryyurts.com/gift.html">Gift Certificates</a> if you'd like to gift a trip to someone else</h6>
 <hr>
+
+
+<script>
+
+	function chooseAlpine(){
+		document.getElementById('alpine-button').classList += ' chosen'
+		document.getElementById('lupine-button').classList = "";
+		document.getElementById('book-lupine-yurt').classList = "";
+		document.getElementById('book-lupine-yurt').style.display = 'none';
+
+		document.getElementById('book-alpine-yurt').style.display = 'block';
+		document.getElementById('book-alpine-yurt').classList += 'fadeIn';
+	}
+
+	function chooseLupine(){
+		document.getElementById('lupine-button').classList += ' chosen'
+		document.getElementById('alpine-button').classList = "";
+		document.getElementById('book-alpine-yurt').classList = "";
+		document.getElementById('book-alpine-yurt').style.display = 'none';
+
+		document.getElementById('book-lupine-yurt').style.display = 'block';
+		document.getElementById('book-lupine-yurt').classList += 'fadeIn';
+	}
+
+	// Page runtime
+	if (HASH=="#lupine"){
+		chooseLupine();
+	}else{
+		chooseAlpine();
+	}
+
+</script>
       </div>
     </div>
     <div class="two columns right-sidebarright">

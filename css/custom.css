@@ -349,7 +349,7 @@ img.social:hover{
 }
 
 div.breadcrumbs{
-	font-size:1.25rem;
+	font-size:1em;
 	padding: 5px;
 }
 
@@ -381,13 +381,17 @@ div.breadcrumbs a:hover{
 	border: 1px solid #66ABDF;
 }
 
-div.toggle h4,h5,h6{
+div.toggle h4, 
+div.toggle h5, 
+div.toggle h6{
 	display:inline-block;
 	padding: 5px 20px;
 	margin: 0px;
 }
 
-div.toggle h4:hover,h5:hover,h6:hover{
+div.toggle h4:hover, 
+div.toggle h5:hover, 
+div.toggle h6:hover{
 	background-color: #66ABDF;
 	color: white;
 	cursor: pointer;
@@ -421,9 +425,26 @@ div.toggle h5.chosen, h6.chosen, h4.chosen{
 }
 
 .faq-section{
-	font-size:2.5rem;
-	margin-top:25px;
-	margin-bottom:2px;
+	font-size:1.8rem;
+	margin-top:5px;
+	padding: 2px;
+	letter-spacing: 0rem;
+}
+
+.faq-section:before {
+    content: "+ ";
+    font-weight: bold;
+    font-style: italic;
+}
+
+.faq-section:hover{
+	background-color:#EEE;
+	cursor:pointer;
+}
+
+.faq-expand{
+	margin-left:10px;
+	margin-bottom:25px;
 }
 
 div.tile-button{

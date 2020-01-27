@@ -1,8 +1,4 @@
-/*
-  Main Navigation
-*/
-
-nav#main-nav{
+nav{
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 	background-color:rgba(25,25,25,0.75);
@@ -10,113 +6,148 @@ nav#main-nav{
   z-index:100;
 }
 
-nav#main-nav div#nav-buttons a{
-  text-decoration: none;
-	letter-spacing: 1px;
-	display:inline-block;
-  vertical-align:baseline;
-	
-  /*border-radius: 0px 0px 0px 20px;  top left, top right, bottom right, bottom left */
-}
-
-a.nav-button{
-  text-transform: uppercase;
+nav a.nav-button{
   color:white;
-  padding: 15px 5px 15px 5px;
-  margin:0 1%;
-  font-size:18px;
-  text-shadow:2px 2px 4px #000;
+  margin:0;
+  font-size:16px;
+  text-decoration:none;
+  vertical-align: baseline;
+  border-radius: 3px 3px 0px 0px;
 }
 
-nav#main-nav div#nav-buttons a:hover:not(.icon){
-	background-color:#01AEF3;
-	text-shadow:2px 2px 4px #555;
-	animation-name: resaturate;
+/* All navigation buttons */
+nav a.nav-button.active{
+  background-color:#01AEF3;
+  text-shadow:none;
+}
+
+/* Level 1 Navigation Settings */
+nav div.level-1{
+  display: flex;
+  justify-content: space-between;
+}
+
+nav div.level-1 a.nav-button{
+  letter-spacing:2px;
+  text-transform: uppercase;
+  padding: 10px 10px 10px 10px;
+}
+
+
+nav div.level-1 a.nav-button:hover:not(.active){
+  color:#FCF900;
+  background-color:#01AEF3;
+  text-shadow:2px 2px 4px #555;
+  animation-name: resaturate;
   animation-duration: 0.5s;
-  border-radius: 3px;
+  border-radius: 3px 3px 3px 3px;
+  margin-bottom: 1px;
+  padding-bottom: 9px;
 }
 
 
-nav#main-nav div#nav-buttons a.active{
-	color:#FCF900;
+/* Level 2 Settings */
+nav div.level-2{
+  display: flex;
+  justify-content: space-between;
+  background-color:#01AEF3;
+  text-align:center;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
-nav#main-nav .icon {
-    display: none;
-
+nav div.level-2 a.nav-button{
+  padding: 10px 10px 10px 10px;
+  font-size:15px;
+  letter-spacing: 1px;
 }
 
-img#nav-logo{
-  z-index:100;
-  height:50px;
-  padding: 0px;
-  position:fixed;
-  top:5px;
-  left:10%; 
+nav div.level-2 a.nav-button.active{
+  padding: 10px 10px 10px 10px;
+  color:#FCF900;
+  text-shadow:2px 2px 4px #555;
 }
 
-img#nav-logo:hover{
-  cursor:pointer;
-  padding: 0px;
-  position:fixed;
-  top:5px;
-  left:10%; 
-
+nav div.level-2 a.nav-button:hover{
+  color:#FCF900;
+  text-shadow:2px 2px 4px #555;
+  animation-name: resaturate;
+  animation-duration: 0.5s;
 }
 
+/* and mobile only... */
+nav div#main-navigation a.icon {
+  display:none;
+}
 
 @media screen and (max-width: 850px) {
-
-  /* Navigation */
-  nav#main-nav{
-  	position:fixed;
-  	top:0;
-  	right:0;
-  	left:0;
-  	z-index:3;
-    bottom:unset;
-
-  }
-  nav#main-nav div#nav-buttons a {
+  /* If we're under 850px wide, then only show the icon*/
+  nav a:not(.icon){
   	display: none;
   }
 
-  nav#main-nav a.icon {
-  	display:block;
+  nav div#main-navigation a.icon {
+    display:block;
     position:fixed;
-    backgorund-color:;
     top:0px;
     right:0px;
     color:white;
     font-weight:400;
-    font-size:3em;
+    font-size:4em;
     text-decoration:none; 
     background-color:rgba(0,0,0,0.5); 
     padding-left:10px; 
     padding-right:10px;
-    border-radius: 0px 0px 0px 20px; /* top left, top right, bottom right, bottom left */
+    border-radius: 0px 0px 0px 20px;
   }
+}
 
-  nav#main-nav div#nav-buttons a.logo {
-    display: block;
-    float:left;
-    color:white;
-    font-weight:400;
-  }
+nav div#main-navigation.mobile{
+  position:fixed;
+  background-color:rgba(25,25,25,0.75);
+  top:0;
+  right:0;
+  left:0;
+  z-index:3;
+  bottom:unset;
+}
 
-  nav#main-nav div#nav-buttons.responsive a {
-    display: block;
-    clear:both;
-  }
+nav > div#main-navigation.mobile > div.level-1{
+  display:block;
+  text-align:left;
+}
 
-  nav#main-nav div#nav-buttons.responsive a.icon {
-  	display:block;
-    position:fixed;
-    top:0px;
-    right:0px;
-    color:white;
-    font-weight:400;
-    border-radius: 0px 0px 0px 20px; /* top left, top right, bottom right, bottom left */
-  }
+nav > div#main-navigation.mobile > div.level-1 > a.nav-button:first-of-type{
+  margin-top:50px;
+}
+
+nav > div#main-navigation.mobile > div.level-1 > a.nav-button{
+  display:block;
+  border-radius:0px;
+}
+
+nav > div#main-navigation.mobile > div.level-1 > a.nav-button.active{
+  display:block;
+  color: yellow;
+  background-color:#01AEF3;
+}
+
+nav > div#main-navigation.mobile > div.level-1 > a.nav-button.active > div.level-2{
+  display:block;
+  text-align:center;
+}
+
+nav > div#main-navigation.mobile > div.level-1 > a.nav-button.active > div.level-2 > a.nav-button{
+  display:block;
+  text-transform:none;
+  background-color:#01AEF3;
+}
+
+nav div.mobile a.icon {
+	display:block;
+  position:fixed;
+  top:0px;
+  right:0px;
+  color:white;
+  font-weight:400;
+  border-radius: 0px 0px 0px 20px; 
+  z-index:9999;
 }

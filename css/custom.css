@@ -85,7 +85,7 @@ img.sub-header-logo{
 		display:inline-block;
 	}
 	header{
-		min-height:303px;
+		min-height:250px;
 	}
 }
 
@@ -101,7 +101,7 @@ div.header-container{
 
 @media(min-width: 1000px){
 	img.sub-header-logo{
-		height:250px;
+		height:200px;
 		margin-left:10px;
 	}
 }

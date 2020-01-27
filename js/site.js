@@ -21,38 +21,44 @@ function hideParent(elem, level=0){
   parent.style.display = 'none';  
 }
 
+
+/* Handle our sticky navigation bar */
 var nonMobile = window.matchMedia("(min-width: 900px)")
+var isFixed = false;
+var navBarTop;
+
+function fixMenuBar(scrollTop){
+  if (scrollTop >= navBarTop){
+    if(!isFixed){
+      navBar.style.position = "fixed";
+      navBar.style.top = 0;
+      document.getElementById('')
+    }
+    isFixed = true;
+  }else{
+    if (isFixed){
+      navBar.style.position = "relative";
+      navBar.style.top = "inherit";
+      isFixed=false;
+    }
+  }
+}
 
 window.addEventListener('load', function(){
-  var scrollTop = 0;
-  var isFixed = false;
-  var navBar  = document.getElementById("main-nav")
+
+  var navBar  = document.getElementById("navBar");
+  navBarTop = navBar.offsetTop;
+
+  var header = document.getElementsByTagName('header')[0]
+  header.style.cssText += "; height:" + header.offsetHeight + "px !important;";
+
+  var top = window.pageYOffset;
+  if (top > 0){
+    fixMenuBar(top);
+  }
 
   window.addEventListener('scroll',function(e){
-    {
-      scrollTop = window.pageYOffset
-      if (scrollTop >= 255){
-        if(!isFixed){
-          navBar.style = "position:fixed; top:0;"
-          // content.style = "margin-top:55px;"
-          isFixed= true;
-
-          if (nonMobile.matches){
-            document.getElementById('nav-logo').style.display='block';  
-          }
-        }
-      }else{
-        if (isFixed){
-          navBar.style = "position:relative;"
-          // content.style = "margin-top:0px;"
-          isFixed=false;
-
-          if (nonMobile.matches){
-            document.getElementById('nav-logo').style.display='none';  
-          }
-        }
-      }
-    }
+    fixMenuBar(window.pageYOffset)
   })
 })
 

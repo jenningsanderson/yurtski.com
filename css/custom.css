@@ -132,13 +132,13 @@ div.header-container{
 */
 
 body{
-	font-size:14px;
+	font-size:15px;
 }
 
 p{margin-bottom:1rem;}
 
 p.small{
-	font-size:0.75em;
+	font-size:0.8em;
 }
 
 h3{
@@ -231,7 +231,7 @@ iframe.embedded-video{
 
 .caption{
 	font-style:italic;
-	font-size: 1.25rem;
+	font-size: 1.3rem;
 }
 
 table{

@@ -94,7 +94,7 @@ div.header-container{
 	    /*width: 100%;*/
 	    max-width: 960px;
 	    margin: 0 auto;
-	    /* padding: 0 20px; */
+	     /*padding: 0 20px; */
 	    box-sizing: border-box;
 	}
 
@@ -204,6 +204,7 @@ div.table{
 .container{
 	padding-left:6px;
 	padding-right:6px;
+	padding-top:5px;
 }
 
 /*@media (min-width: 400px) {
@@ -540,7 +541,7 @@ div.tile-button:hover{
 
 
 footer{
-	padding-top: 5px;
+	padding-top: 0px;
 	background-color:lightgray;
 	overflow:scroll;
 }

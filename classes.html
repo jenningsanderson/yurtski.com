@@ -209,11 +209,16 @@
           
             <a style="font-size:0.7em;" href="https://montanabackcountryyurts.com/dec-womens-avy-one" class='button bg-yurtski-blue' id="classAvailability_43">...</a></td>
         <script>
-          hitCheckfrontAPI('item/43/cal', function(data) {
+          hitCheckfrontAPI('item/43/cal+?start_date=20201201&end_date=20210131', function(data) {
             try{
               var availability = data.item.cal.available - data.item.cal.booked
-              console.log(data.item)
-              document.getElementById("classAvailability_43").innerHTML = "Book Now"
+              if (data.item.cal.available==0){
+                document.getElementById("classAvailability_43").className += ' sold-out'
+                document.getElementById("classAvailability_43").href = '#avy-one'
+                document.getElementById("classAvailability_43").innerHTML = "Sold out"  
+              }else{
+                document.getElementById("classAvailability_43").innerHTML = "Book Now"  
+              }
             }catch(e){
               document.getElementById("classAvailability_43").className += ' sold-out'
               document.getElementById("classAvailability_43").href = '#avy-one'
@@ -245,11 +250,16 @@
           
             <a style="font-size:0.7em;" href="https://montanabackcountryyurts.com/jan-avy-one-yurtski" class='button bg-yurtski-blue' id="classAvailability_50">...</a></td>
         <script>
-          hitCheckfrontAPI('item/50/cal', function(data) {
+          hitCheckfrontAPI('item/50/cal+?start_date=20201201&end_date=20210131', function(data) {
             try{
               var availability = data.item.cal.available - data.item.cal.booked
-              console.log(data.item)
-              document.getElementById("classAvailability_50").innerHTML = "Book Now"
+              if (data.item.cal.available==0){
+                document.getElementById("classAvailability_50").className += ' sold-out'
+                document.getElementById("classAvailability_50").href = '#avy-one'
+                document.getElementById("classAvailability_50").innerHTML = "Sold out"  
+              }else{
+                document.getElementById("classAvailability_50").innerHTML = "Book Now"  
+              }
             }catch(e){
               document.getElementById("classAvailability_50").className += ' sold-out'
               document.getElementById("classAvailability_50").href = '#avy-one'
@@ -278,11 +288,16 @@
           
             <a style="font-size:0.7em;" href="https://montanabackcountryyurts.com/jan-avy-one-bbh" class='button bg-yurtski-blue' id="classAvailability_46">...</a></td>
         <script>
-          hitCheckfrontAPI('item/46/cal', function(data) {
+          hitCheckfrontAPI('item/46/cal+?start_date=20201201&end_date=20210131', function(data) {
             try{
               var availability = data.item.cal.available - data.item.cal.booked
-              console.log(data.item)
-              document.getElementById("classAvailability_46").innerHTML = "Book Now"
+              if (data.item.cal.available==0){
+                document.getElementById("classAvailability_46").className += ' sold-out'
+                document.getElementById("classAvailability_46").href = '#avy-one'
+                document.getElementById("classAvailability_46").innerHTML = "Sold out"  
+              }else{
+                document.getElementById("classAvailability_46").innerHTML = "Book Now"  
+              }
             }catch(e){
               document.getElementById("classAvailability_46").className += ' sold-out'
               document.getElementById("classAvailability_46").href = '#avy-one'

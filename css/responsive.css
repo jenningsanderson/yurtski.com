@@ -19,7 +19,7 @@ img.header-logo{
 
 @media (min-width: 820px) {
 	img.header-logo{
-		height:250px;
+		height:198px;
 	}
     .small-screen-only{
         display:none;

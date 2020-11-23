@@ -44,7 +44,7 @@ h3.page-subtitle{
 div.title-box{
 	display:inline-block;
   	margin: 0 auto;
-  	text-align:center;
+  	/*text-align:center;*/
 }
 
 img.header-logo{
@@ -303,6 +303,14 @@ img.social:hover{
 	cursor:pointer;
 	animation-name: resaturate;
     animation-duration: 0.25s;
+}
+
+.pricing-add-on{
+	background-color: #F9F9F9;
+	border-left:1px solid #01AEF3;
+	border-bottom: 1px solid #01AEF3;
+	padding: 2px 10px;
+	margin: 10px 5px;
 }
 
 .focus-box{

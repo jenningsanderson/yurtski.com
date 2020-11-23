@@ -33,6 +33,9 @@
 .py12{ padding-top:12px; padding-bottom:12px; }
 .py24{ padding-top:24px; padding-bottom:24px; }
 
+.unfloat{
+	float:none;
+}
 
 .tight{
 	margin:0;

@@ -1,5 +1,72 @@
 console.log('Page loaded; kicking off Javascript...')
 
+
+// Going Stateful; this is where defaults should be defined
+var STATE = {}
+
+function loadState(){
+  console.log('Loading state')
+  var urlParams = new URLSearchParams(window.location.search);
+
+  Object.keys(STATE).forEach(function(k){
+    if (urlParams.get(k)){
+      STATE[k] = JSON.parse(urlParams.get(k))  
+    }
+  })
+}
+
+function updateState(){
+
+  var urlParams = new URLSearchParams(window.location.search);
+  var getString = "?";
+  
+  Object.keys(STATE).forEach(function(k){
+    if (STATE[k]!=undefined){
+      getString += "&"+k+"="+JSON.stringify(STATE[k])
+    }
+  })
+
+  let url = window.location.href.substring(0, window.location.href.indexOf("?"))
+  
+  if (window.history.replaceState) {
+      //prevents browser from storing history with each change:
+      window.history.replaceState(null, "Montana Backcountry Yurts", url + getString);
+  }
+}
+
+function  collapseToggleables(actuallyHide=true){
+  // Togglable sections: 
+  var sections = document.getElementsByClassName('toggle-child-on-click')
+
+  //Hide if JS if enabled: 
+  for(var i=0; i<sections.length; i++){
+    //Hide the children first
+    if(actuallyHide){
+      sections[i].nextElementSibling.style.display = 'none';  
+    }
+    //Add the event listeners:
+    sections[i].addEventListener('click',function(e){
+      if( this.nextElementSibling.style.display != 'block') {
+        this.nextElementSibling.style.display = 'block';
+      }else{
+        this.nextElementSibling.style.display = 'none';
+      }
+    });
+  }
+  var buttons = document.getElementsByClassName('close-parent')
+  for(var i=0; i<buttons.length; i++){
+
+    //Add the event listeners:
+    buttons[i].addEventListener('click',function(e){
+      this.parentElement.style.display='none';
+    });
+  }
+}
+
+
+
+
+
 var HASH;
 
 try{

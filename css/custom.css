@@ -196,6 +196,10 @@ div.yurt{
 	text-decoration:none;
 }
 
+.button:hover{
+	text-decoration:none;
+}
+
 div.table{
 	/*max-width:320px;*/
 	overflow: scroll;
@@ -258,6 +262,14 @@ td a.button{
 
 */
 
+.mid-page-info-box{
+	border: 1px solid #66ABDF;
+	padding: 5px;
+	border-radius: 4px;
+	background-color: #fcfff5;
+
+}
+
 div.call-to-action{
 	position:relative;
 	margin:5px 0px;
@@ -294,6 +306,11 @@ div.call-to-action h4{
 	}
 }
 
+img.simple-outline{
+	border:3px solid #FFF;
+	border-radius: 3px;
+}
+
 img.social{
 	filter: grayscale(100%);
 }
@@ -309,8 +326,8 @@ img.social:hover{
 	background-color: #F9F9F9;
 	border-left:1px solid #01AEF3;
 	border-bottom: 1px solid #01AEF3;
-	padding: 2px 10px;
-	margin: 10px 5px;
+	padding: 2px 5px;
+	margin: 10px 0px;
 }
 
 .focus-box{
@@ -383,11 +400,13 @@ div.breadcrumbs a:hover{
 .toggle{
 	padding: 0px;
 	display: inline-block;
-	margin-top: -15px;
+	/*margin-top: -15px;*/
+	margin: 5px;
 	background-color:white;
 	border-radius: 3px;
 	color: #66ABDF;
-	border: 1px solid #66ABDF;
+	/*border: 1px solid #66ABDF;*/
+	/*border: 1px solid black;*/
 }
 
 div.toggle h4, 
@@ -395,18 +414,19 @@ div.toggle h5,
 div.toggle h6{
 	display:inline-block;
 	padding: 5px 20px;
-	margin: 0px;
+	margin: 5px;
+	border-radius: 3px;
 }
 
 div.toggle h4:hover, 
 div.toggle h5:hover, 
 div.toggle h6:hover{
 	background-color: #66ABDF;
-	color: white;
+	color: #F7ED55;
 	cursor: pointer;
 }
 
-div.toggle h5.chosen, h6.chosen, h4.chosen{
+div.toggle h5.chosen, h6.chosen, h4.chosen a.chosen{
 	background-color:#66ABDF;
 	color: white;
 }
